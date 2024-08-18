@@ -1,37 +1,21 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    //галерея
-    // var swiper = new Swiper(".mySwiper", {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 0,
-    //         disableOnInteraction: false,
-    //     },
-    //     speed: 3000,
-    // });
-
-
-    // var swiper2 = new Swiper(".mySwiper2", {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 0,
-    //         disableOnInteraction: false,
-    //         reverseDirection: true,
-    //     },
-    //     speed: 3000,
-    // });
-    
     const marquee = document.querySelector('.marquee');
     const containerWidth = document.querySelector('.marquee-container').offsetWidth;
     const marqueeWidth = marquee.scrollWidth;
 
-    const animationDuration = (marqueeWidth / 500) + 's';
+    const animationDuration = (marqueeWidth / 300) + 's';
 
     marquee.style.animationDuration = animationDuration;
 
+
+
+    const marquee2 = document.querySelector('.marquee2');
+    const containerWidth2 = document.querySelector('.marquee-container2').offsetWidth;
+    const marqueeWidth2 = marquee2.scrollWidth;
+
+    const animationDuration2 = (marqueeWidth2 / 300) + 's';
+
+    marquee2.style.animationDuration = animationDuration2;
 
 })
