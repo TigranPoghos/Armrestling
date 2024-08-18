@@ -143,3 +143,63 @@ body {
   right: -54px;
   z-index: 5;
 }
+
+.gallery__row {
+  flex-direction: column;
+  padding: 0 54px;
+  box-sizing: border-box;
+}
+.gallery__title {
+  display: flex;
+  gap: 1px;
+  margin-bottom: 27px;
+}
+.gallery__title-text {
+  font-weight: 900;
+  font-size: 127px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  font-family: "Zen Kaku Gothic New";
+  line-height: 1;
+}
+.gallery__title-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.gallery__title-right {
+  margin-top: 30px;
+}
+.gallery__top {
+  margin-bottom: 22px;
+}
+.gallery__bottom {
+  display: flex;
+}
+.gallery__bottom .swiper-wrapper {
+  flex-direction: row-reverse;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 64px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 630px;
+  width: 100% !important;
+  height: 390px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
