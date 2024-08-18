@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
-            reverseDirection: true,
+            reverseDirection: true
         },
         speed: 3000,
     });

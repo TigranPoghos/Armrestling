@@ -196,10 +196,6 @@ body {
 
     &__bottom {
         display: flex;
-
-        & .swiper-wrapper {
-            flex-direction: row-reverse;
-        }
     }
 }
 

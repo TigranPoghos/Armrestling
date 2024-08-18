@@ -176,9 +176,6 @@ body {
 .gallery__bottom {
   display: flex;
 }
-.gallery__bottom .swiper-wrapper {
-  flex-direction: row-reverse;
-}
 
 .swiper {
   width: 100%;
