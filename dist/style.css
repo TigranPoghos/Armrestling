@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-  max-width: 1740px;
+  max-width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
   background-color: #1D1D1D;
@@ -53,6 +53,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 .header__row {
   max-width: 628px;
@@ -100,13 +101,41 @@ body {
   flex-direction: column;
 }
 
-.arm {
-  height: 100%;
-}
 .arm .container {
-  height: 100%;
+  position: relative;
 }
 .arm__fon {
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(180deg, rgba(29, 29, 29, 0.3) 0%, #1d1d1d 100%), linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(116deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(245deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), url("../image/arm__fon.jpg");
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.arm__text {
+  position: relative;
+  z-index: 2;
+  top: 302px;
+  left: 10px;
+}
+.arm__text img:last-child {
+  margin-top: 30px;
+  margin-right: 37px;
+  margin-left: auto;
+  display: flex;
+}
+.arm__line img:first-child {
+  position: absolute;
+  top: 445px;
+  right: -75px;
+  z-index: 5;
+}
+.arm__line img:last-child {
+  position: absolute;
+  top: 587px;
+  right: -54px;
+  z-index: 5;
 }
