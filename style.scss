@@ -105,15 +105,16 @@ body {
     &__row {
         flex-direction: column;
         text-align: center;
+        position: relative;
     }
 
     &__fon {
         height: 100%;
-        background: linear-gradient(180deg, rgba(29, 29, 29, 0.3) 0%, #1d1d1d 100%), linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(116deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(245deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), url("../image/arm__fon.jpg");
+        // background: linear-gradient(1deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), url("");
         position: absolute;
         z-index: 1;
         width: 100%;
-        top: 0;
+        bottom: 0;
         left: 0;
         background-repeat: no-repeat;
         background-size: cover;
@@ -126,6 +127,7 @@ body {
         margin-right: auto;
         margin-top: 130px;
         margin-bottom: 21px;
+        z-index: 2;
 
         &-svg {
             margin-top: 25px;
@@ -150,11 +152,13 @@ body {
         opacity: .5;
         font-family: "Montserrat";
         margin-bottom: 33px;
+        z-index: 2;
     }
 
     &__contact {
         display: flex;
         margin-bottom: 121px;
+        z-index: 2;
 
         &-left {
             justify-content: center;
@@ -177,7 +181,12 @@ body {
         }
     }
 
+    &__line {
+        z-index: 2;
+    }
+
     & .header__nav {
+        z-index: 2;
         margin-top: 36px;
         margin-bottom: 91px;
         margin-left: auto;
@@ -194,6 +203,8 @@ body {
 
 .arm {
     height: 100vh;
+    overflow: hidden;
+
     & .container {
         position: relative;
         height: 100%;
