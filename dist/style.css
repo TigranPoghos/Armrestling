@@ -30,15 +30,14 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background-color: #1D1D1D;
 }
 
 .container {
   max-width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-  background-color: #1D1D1D;
-  margin: 0 38.5px;
+  padding: 0 100px;
   box-sizing: border-box;
 }
 
@@ -48,24 +47,18 @@ body {
 
 .header {
   flex: 0 0 auto;
-  margin-top: 11px;
+  margin-top: 30px;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 100;
-}
-.header__row {
-  max-width: 628px;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
 }
-.header__line {
-  height: 2px;
-  max-width: 561px;
-  width: 100%;
-  background-color: #fff;
-  margin-top: 14px;
+.header__row {
+  align-items: center;
 }
 .header .container {
   background-color: transparent;
@@ -74,41 +67,40 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: 13px;
+  margin-left: 10px;
+  max-width: 726px;
 }
 .header__menu-ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 .header__menu-item {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 20px;
   color: #fff;
+  text-transform: uppercase;
 }
 .header__nav {
   font-family: "Montserrat";
-  margin-top: 10px;
-  max-width: 560px;
+  margin-bottom: 10px;
+}
+.header__line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .footer {
   flex: 0 0 auto;
+  background-color: #000;
 }
 .footer__row {
   flex-direction: column;
   text-align: center;
   position: relative;
-}
-.footer__fon {
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .footer__title {
   display: flex;
@@ -126,7 +118,6 @@ body {
   font-family: "Zen Kaku Gothic New";
   font-weight: 900;
   font-size: 128px;
-  letter-spacing: -0.03em;
   text-align: center;
   color: #f00;
   line-height: 1;
@@ -169,11 +160,10 @@ body {
 }
 .footer .header__nav {
   z-index: 2;
-  margin-top: 36px;
-  margin-bottom: 91px;
+  margin-top: 30px;
+  margin-bottom: 52px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
 
 .main {
@@ -189,6 +179,7 @@ body {
 .arm .container {
   position: relative;
   height: 100%;
+  padding: 0 66px;
 }
 .arm__fon {
   height: 100%;
@@ -204,37 +195,26 @@ body {
 .arm__text {
   position: relative;
   z-index: 2;
-  top: 302px;
-  left: 10px;
+  top: 320px;
+  left: 0px;
 }
-.arm__text img:last-child {
-  margin-top: 30px;
-  margin-right: 37px;
-  margin-left: auto;
-  display: flex;
-}
-.arm__line img:first-child {
+.arm__line {
+  top: 471px;
+  right: -15px;
   position: absolute;
-  top: 445px;
-  right: -75px;
-  z-index: 5;
-}
-.arm__line img:last-child {
-  position: absolute;
-  top: 587px;
-  right: -54px;
   z-index: 5;
 }
 
+.gallery {
+  margin-bottom: 200px;
+}
 .gallery__row {
   flex-direction: column;
-  padding: 0 54px;
-  box-sizing: border-box;
 }
 .gallery__title {
   display: flex;
   gap: 1px;
-  margin-bottom: 27px;
+  margin-bottom: 75px;
 }
 .gallery__title-text {
   font-weight: 900;
@@ -244,10 +224,16 @@ body {
   font-family: "Zen Kaku Gothic New";
   line-height: 1;
 }
+.gallery__title-line {
+  height: 5px;
+  background-color: #fff;
+  width: 100%;
+}
 .gallery__title-left {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
+  margin-right: 5px;
 }
 .gallery__title-right {
   margin-top: 30px;
@@ -257,11 +243,15 @@ body {
 }
 
 .marquee-container {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 22px;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
 }
 
 .marquee {
@@ -293,11 +283,14 @@ body {
   }
 }
 .marquee-container2 {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 22px;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
 }
 
 .marquee2 {
@@ -326,4 +319,34 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+.federation {
+  position: relative;
+  margin-bottom: 200px;
+  min-height: 1134px;
+}
+.federation__fon {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: -2;
+}
+.federation__percon {
+  position: absolute;
+  top: 171px;
+  left: 3px;
+}
+
+.event {
+  margin-bottom: 200px;
+}
+.event .gallery__title-right {
+  margin-top: 160px;
+}
+
+.partner {
+  margin-bottom: 200px;
+}
+.partner .gallery__title-right {
+  margin-top: 160px;
 }

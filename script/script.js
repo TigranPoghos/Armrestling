@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const containerWidth = document.querySelector('.marquee-container').offsetWidth;
     const marqueeWidth = marquee.scrollWidth;
 
-    const animationDuration = (marqueeWidth / 300) + 's';
+    const animationDuration = (marqueeWidth / 100) + 's';
 
     marquee.style.animationDuration = animationDuration;
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const containerWidth2 = document.querySelector('.marquee-container2').offsetWidth;
     const marqueeWidth2 = marquee2.scrollWidth;
 
-    const animationDuration2 = (marqueeWidth2 / 300) + 's';
+    const animationDuration2 = (marqueeWidth2 / 100) + 's';
 
     marquee2.style.animationDuration = animationDuration2;
 
