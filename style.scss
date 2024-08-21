@@ -424,7 +424,6 @@ body {
     background: #1D1D1D;
     z-index: 1001;
     opacity: 1;
-    transition: opacity 1s ease-out;
 
     &__row {
         flex-direction: column;
@@ -455,6 +454,12 @@ body {
         height: 100%;
         background-color: #f00;
         animation: load 3s 1s;
+    }
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease-out, visibility 1s ease-out;
     }
 
 }

@@ -20,30 +20,20 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+    const preloader = document.querySelector('.preloader');
 
+    // Функция, вызываемая по завершении всех анимаций
+    function hidePreloader() {
+        preloader.classList.add('preloader--hidden');
+        // Дополнительно удаляем элемент из DOM после завершения перехода
+        setTimeout(() => {
+            preloader.style.display = 'none'; // Или можете удалить элемент полностью
+        }, 3000); // Задержка должна совпадать с длительностью перехода
+    }
 
-    // window.onload = function () {
-    //     document.body.classList.add('loaded_hiding');
-    //     window.setTimeout(function () {
-    //       document.body.classList.add('loaded');
-    //       document.body.classList.remove('loaded_hiding');
-    //     }, 500);
-    // }
+    // Добавляем обработчик события окончания анимации
+    preloader.addEventListener('animationend', hidePreloader);
+    
 
-    // window.addEventListener('load', () => {
-    //     setTimeout(() => {
-    //         const preloader = document.getElementById('.preloader');
-    //         preloader.classList.add('hidden');
-            
-    //         // Показываем контент, когда прелоадер скрыт
-    //         const header = document.getElementById('.header');
-    //         const main = document.getElementById('.main');
-    //         const footer = document.getElementById('.footer');
-
-    //         header.style.display = 'flex';
-    //         main.style.display = 'flex';
-    //         footer.style.display = 'flex';
-    //     }, 3000); // Задержка 3 секунды
-    // });
 
 })
