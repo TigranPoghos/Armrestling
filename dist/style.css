@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -214,7 +215,7 @@ body {
 .gallery__title {
   display: flex;
   gap: 1px;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
 }
 .gallery__title-text {
   font-weight: 900;
@@ -349,4 +350,68 @@ body {
 }
 .partner .gallery__title-right {
   margin-top: 160px;
+}
+
+@keyframes showImage {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+@keyframes shrinkContainer {
+  0% {
+    width: 90%; /* Начальная ширина */
+  }
+  100% {
+    width: 70%; /* Конечная ширина после уменьшения */
+  }
+}
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #1D1D1D;
+  z-index: 1001;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+.preloader__row {
+  flex-direction: column;
+  height: 100%;
+}
+.preloader__top {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: showImage 1s forwards;
+  transform-origin: center center;
+}
+.preloader__bottom {
+  width: 70%;
+  height: 14px;
+  background-color: #ddd;
+  overflow: hidden;
+  animation: shrinkContainer 1s forwards;
+  margin: auto auto 123px auto;
+}
+.preloader__line {
+  width: 0;
+  height: 100%;
+  background-color: #f00;
+  animation: load 3s 1s;
 }
