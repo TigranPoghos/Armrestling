@@ -243,7 +243,6 @@ body {
         &-text {
             font-weight: 900;
             font-size: 127px;
-            letter-spacing: -0.03em;
             color: #fff;
             font-family: "Zen Kaku Gothic New";
             line-height: 1
@@ -487,98 +486,28 @@ body {
         box-sizing: border-box;
     }
 
-    & .gallery__title {
-        margin-bottom: 345px;
-    }
-
     & .gallery__title-right {
         margin-top: 160px;
     }
 
     &__content {
         position: relative;
-        margin-left: 112px;
-        display: flex;
-    }
-
-    &__left {
         display: flex;
         flex-direction: column;
-        max-width: 890px;
 
-        &-bottom {
-            display: flex;
-            border: 1px solid rgba(255, 255, 255, 0.4); 
-            max-width: max-content;
-        }
-        
-        &-top {
-            max-height: 646px;
-        }
-
-        &-button {
-            min-width: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 44px;
-            background: rgba(255, 0, 0, 0.24);
-            cursor: pointer;
-            border: none;
+        &-text {
+            background: linear-gradient(223deg, rgba(208, 8, 8, 0.3) 0%, rgba(106, 4, 4, 0.3) 100%);
+            backdrop-filter: blur(70px);
+            padding: 20px;
             box-sizing: border-box;
-
-            & span {
-                font-weight: 700;
-                font-size: 24px;
-                text-transform: uppercase;
-                color: #fff;
-                font-family: "Montserrat";
-            }
-        }
-
-        &-line {
-            width: 1px;
-            height: 44px;
-            border: 1px solid rgba(255, 255, 255, 0.4); 
-        }
-    }
-
-    &__right {
-        max-height: 623px;
-        margin-top: 11px;
-        display: flex;
-        flex-direction: column;
-        backdrop-filter: blur(76px);
-        background: rgba(240, 124, 124, 0.24);
-        border-radius: 0 10px 10px 0;
-        max-width: 392px;
-        padding: 5px 10px 20px 10px;
-        box-sizing: border-box;
-        gap: 52px;
-
-        &-top {
-            display: flex;
-            margin-left: auto;
-            margin-right: 0;
+            max-width: 879px;
+            margin-bottom: 400px;
 
             & span {
                 font-weight: 500;
-                font-size: 96px;
-                letter-spacing: -0.03em;
-                font-family: "Montserrat";
-                color: transparent;
-                -webkit-text-stroke: 1px rgba(255, 0, 0, 0.55);
-            }
-        }
-
-        &-bottom {
-            & span {
-                font-weight: 700;
-                font-size: 24px;
-                text-transform: uppercase;
+                font-size: 40px;
                 color: #fff;
-                font-family: "Montserrat";
-                max-width: 336px;
+                font-family: "Zen Kaku Gothic New";
             }
         }
     }
@@ -596,6 +525,76 @@ body {
         top: -480px;
         left: -124px;
         z-index: -5;
+    }
+
+    &__item {
+        background-image: url("../image/event.png");
+        padding: 472px 0 50px 126px;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-content {
+            backdrop-filter: blur(76px);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px 20px;
+            justify-content: space-between;
+            display: flex;
+            gap: 70px;
+        }
+
+        &-left {
+            max-width: 610px;
+
+            & span {
+                font-weight: 500;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #fff;
+                font-family: "Zen Kaku Gothic New";
+                line-height: 1;
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-data {
+            margin-top: 22px;
+
+            & span {
+                font-weight: 500;
+                font-size: 64px;
+                text-transform: uppercase;
+                color: #fff;
+                font-family: "Zen Kaku Gothic New";
+                line-height: 46%;
+                margin-bottom: 75px;
+            }
+        }
+
+        &-button {
+            background-color: transparent;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-top: 69px;
+            border: none;
+
+            & span {
+                font-weight: 500;
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                font-family: "Zen Kaku Gothic New";
+                line-height: 1;
+            }
+        }
     }
 }
 
