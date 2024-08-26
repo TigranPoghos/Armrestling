@@ -85,6 +85,11 @@ body {
             font-size: 20px;
             color: #fff;
             text-transform: uppercase;
+            transition: 1s;
+
+            &:hover {
+                color: #f00;
+            } 
         }
     }
 
@@ -363,26 +368,26 @@ body {
         left: 50%;
         margin-left: -50vw;
         width: 100vw;
-        padding-bottom: 22px;
+        padding-bottom: 87px;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 33px;
+        gap: 60px;
         margin-left: auto;
         margin-right: 0;
         align-items: end;
         margin-top: 18px;
 
         &-block {
-            padding: 30px;
+            padding: 20px;
             box-sizing: border-box;
             backdrop-filter: blur(70px);
             background: rgba(107, 4, 4, 0.4);
 
             &-1 {
-                max-width: 750px;
+                max-width: 855px;
             }
 
             &-2 {
@@ -390,7 +395,7 @@ body {
             }
 
             &-3 {
-                max-width: 830px;
+                max-width: 702px;
             }
         }
 
@@ -482,7 +487,7 @@ body {
 
     &__row {
         flex-direction: column;
-        padding-bottom: 445px;
+        padding-bottom: 405px;
         box-sizing: border-box;
     }
 
@@ -514,17 +519,17 @@ body {
 
     &__minotavr {
         position: absolute;
-        top: 50%; 
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 215px;
         z-index: -100;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     &__fon {
         position: absolute;
-        top: -480px;
-        left: -124px;
         z-index: -5;
+        top: 210px;
+        left: -70px;
     }
 
     &__item {
@@ -601,8 +606,42 @@ body {
 .partner {
     margin-bottom: 200px;
     
+    &__row {
+        flex-direction: column;
+        position: relative;
+    }
+
     & .gallery__title-right {
         margin-top: 160px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 60px;
+        max-width: 975px;
+        margin-top: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: 303px;
+
+        &::-webkit-scrollbar {
+            display: none;
+          }
+
+        &-block {
+            & img {
+                border-radius: 20px;
+            }
+        }
+    }
+
+    &__fon {
+        position: absolute;
+        z-index: -5;
+        top: 333px;
+        left: -40px;
     }
 }
 

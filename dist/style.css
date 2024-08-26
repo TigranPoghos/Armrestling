@@ -83,6 +83,10 @@ body {
   font-size: 20px;
   color: #fff;
   text-transform: uppercase;
+  transition: 1s;
+}
+.header__menu-item:hover {
+  color: #f00;
 }
 .header__nav {
   font-family: "Montserrat";
@@ -332,31 +336,31 @@ body {
   left: 50%;
   margin-left: -50vw;
   width: 100vw;
-  padding-bottom: 22px;
+  padding-bottom: 87px;
 }
 .federation__text {
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: 60px;
   margin-left: auto;
   margin-right: 0;
   align-items: end;
   margin-top: 18px;
 }
 .federation__text-block {
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
   backdrop-filter: blur(70px);
   background: rgba(107, 4, 4, 0.4);
 }
 .federation__text-block-1 {
-  max-width: 750px;
+  max-width: 855px;
 }
 .federation__text-block-2 {
   max-width: 806px;
 }
 .federation__text-block-3 {
-  max-width: 830px;
+  max-width: 702px;
 }
 .federation__text-item {
   font-family: "Zen Kaku Gothic New";
@@ -435,7 +439,7 @@ body {
 }
 .event__row {
   flex-direction: column;
-  padding-bottom: 445px;
+  padding-bottom: 405px;
   box-sizing: border-box;
 }
 .event .gallery__title-right {
@@ -462,16 +466,16 @@ body {
 }
 .event__minotavr {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 215px;
   z-index: -100;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .event__fon {
   position: absolute;
-  top: -480px;
-  left: -124px;
   z-index: -5;
+  top: 210px;
+  left: -70px;
 }
 .event__item {
   background-image: url("../image/event.png");
@@ -538,8 +542,35 @@ body {
 .partner {
   margin-bottom: 200px;
 }
+.partner__row {
+  flex-direction: column;
+  position: relative;
+}
 .partner .gallery__title-right {
   margin-top: 160px;
+}
+.partner__item {
+  display: flex;
+  gap: 60px;
+  max-width: 975px;
+  margin-top: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 303px;
+}
+.partner__item::-webkit-scrollbar {
+  display: none;
+}
+.partner__item-block img {
+  border-radius: 20px;
+}
+.partner__fon {
+  position: absolute;
+  z-index: -5;
+  top: 333px;
+  left: -40px;
 }
 
 @keyframes showImage {
