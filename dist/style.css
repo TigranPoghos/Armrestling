@@ -27,12 +27,26 @@ html {
   height: 100%;
 }
 
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+}
+
 body {
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #1D1D1D;
+}
+
+.body__index {
   overflow: hidden;
+}
+.body__index.active {
+  overflow: auto;
 }
 
 .container {
@@ -70,7 +84,6 @@ body {
   flex-direction: column;
   width: 100%;
   margin-left: 10px;
-  max-width: 726px;
 }
 .header__menu-ul {
   display: flex;
@@ -529,6 +542,7 @@ body {
   cursor: pointer;
   margin-top: 69px;
   border: none;
+  text-align: center;
 }
 .event__item-button span {
   font-weight: 500;
@@ -639,4 +653,91 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.Event {
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.Event__row {
+  flex-direction: column;
+  padding: 366px 0 123px 0;
+  box-sizing: border-box;
+}
+.Event__title {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  z-index: 2;
+}
+.Event__title span {
+  font-weight: 900;
+  font-size: 169px;
+  color: #fff;
+  font-family: "Zen Kaku Gothic New";
+  line-height: 1;
+}
+.Event__title svg {
+  margin-top: 35px;
+}
+.Event__subtitle {
+  max-width: 730px;
+  margin-bottom: 200px;
+}
+.Event__subtitle span {
+  font-weight: 500;
+  font-size: 40px;
+  color: #fff;
+  opacity: 0.8;
+  font-family: "Zen Kaku Gothic New";
+}
+.Event__year {
+  font-weight: 900;
+  font-size: 169px;
+  color: #fff;
+  opacity: 0.8;
+  font-family: "Zen Kaku Gothic New";
+  line-height: 1;
+  margin-bottom: 59px;
+}
+.Event__tournament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.Event__tournament-name {
+  font-weight: 700;
+  font-size: 40px;
+  color: #f00;
+  font-family: "Zen Kaku Gothic New";
+}
+.Event__tournament-data {
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Zen Kaku Gothic New";
+}
+.Event__info {
+  max-width: 985px;
+}
+.Event__info span {
+  font-weight: 500;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Zen Kaku Gothic New";
+}
+.Event__fon {
+  position: absolute;
+  bottom: 100px;
+  transform: translate(-50%, 0);
+  left: 50%;
+  filter: blur(20px);
+  z-index: -5;
+}
+.Event__line {
+  top: 0;
+  right: 0;
+  position: absolute;
 }
