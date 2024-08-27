@@ -48,13 +48,14 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #1D1D1D;
+    overflow-x: hidden;
 }
 
 .body__index {
-    overflow: hidden;
+    overflow-y: hidden;
 
     &.active {
-        overflow: auto;
+        overflow-y: auto;
     }
 }
 
@@ -259,6 +260,7 @@ body {
 .gallery {
     margin-bottom: 200px;
     z-index: 5;
+    overflow: hidden;
 
     &__row {
         flex-direction: column;

@@ -49,13 +49,14 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1D1D1D;
+  overflow-x: hidden;
 }
 
 .body__index {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .body__index.active {
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .container {
@@ -237,6 +238,7 @@ body {
 .gallery {
   margin-bottom: 200px;
   z-index: 5;
+  overflow: hidden;
 }
 .gallery__row {
   flex-direction: column;
