@@ -404,6 +404,14 @@ body {
   z-index: -5;
   clip-path: inset(104px 0 0 0);
 }
+.federation__line-1024 {
+  display: none;
+  position: absolute;
+  top: -310px;
+  right: 3px;
+  z-index: -5;
+  clip-path: inset(104px 0 0 0);
+}
 .federation__Nikolaich {
   position: absolute;
   top: 147px;
@@ -520,6 +528,13 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
 }
+.event__fon-1024 {
+  display: none;
+  position: absolute;
+  z-index: -5;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .event__item {
   background-image: url("../image/event.png");
   padding: 472px 0 50px 126px;
@@ -532,7 +547,7 @@ body {
   box-shadow: 0 21px 47px 0 rgba(0, 0, 0, 0.98), 0 85px 85px 0 rgba(0, 0, 0, 0.85), 0 191px 114px 0 rgba(0, 0, 0, 0.5), 0 339px 136px 0 rgba(0, 0, 0, 0.15), 0 530px 148px 0 rgba(0, 0, 0, 0.02);
 }
 .event__item-content {
-  backdrop-filter: blur(76px);
+  backdrop-filter: blur(30px);
   background: rgba(0, 0, 0, 0.5);
   padding: 50px 20px;
   justify-content: space-between;
@@ -850,7 +865,7 @@ body {
     padding: 15px;
   }
   .federation__text-block-1 {
-    max-width: 855px;
+    max-width: 700px;
   }
   .federation__text-block-2 {
     max-width: 640px;
@@ -988,5 +1003,162 @@ body {
   .footer .header__nav {
     margin-top: 21px;
     margin-bottom: 38px;
+  }
+}
+@media (max-width: 1366px) {
+  .container {
+    padding: 0 75px;
+  }
+  .arm__line {
+    right: 0;
+  }
+  .arm__line svg {
+    width: 115px;
+    height: 278px;
+  }
+  .gallery {
+    margin-bottom: 100px;
+  }
+  .gallery__title {
+    margin-bottom: 45px;
+  }
+  .gallery__title-text {
+    font-size: 83px;
+  }
+  .gallery__title-right {
+    margin-top: 25px;
+  }
+  .gallery__title-right svg {
+    max-width: 75px;
+  }
+  .marquee-item {
+    max-width: 375px;
+    max-height: 250px;
+  }
+  .marquee-item2 {
+    max-width: 375px;
+    max-height: 250px;
+  }
+  .federation {
+    margin-bottom: 100px;
+  }
+  .federation__row {
+    padding-bottom: 30px;
+  }
+  .federation__text {
+    gap: 20px;
+  }
+  .federation__text-block-1 {
+    max-width: 500px;
+  }
+  .federation__text-block-2 {
+    max-width: 480px;
+  }
+  .federation__text-block-3 {
+    max-width: 455px;
+  }
+  .federation__text-item {
+    font-size: 20px;
+  }
+  .federation .gallery__title {
+    margin-left: 75px;
+  }
+  .federation__line {
+    display: none;
+  }
+  .federation__line-1024 {
+    display: block;
+    clip-path: none;
+    top: -202px;
+  }
+  .federation__line-1366 {
+    display: none;
+  }
+  .federation__Nikolaich {
+    top: 85px;
+  }
+  .federation__fon svg {
+    max-width: 426px;
+    max-height: 540px;
+  }
+  .federation__percon {
+    top: 70px;
+    left: -5px;
+  }
+  .federation__percon img {
+    max-height: 467px;
+  }
+  .federation__name {
+    top: 122px;
+    left: 246px;
+  }
+  .federation__name-full {
+    font-size: 17px;
+  }
+  .federation__president {
+    padding: 20px 0;
+    max-width: 335px;
+    left: 30px;
+    top: 439px;
+  }
+  .federation__president span {
+    font-size: 20px;
+  }
+  .event {
+    margin-bottom: 100px;
+  }
+  .event .gallery__title-right {
+    margin-top: 110px;
+  }
+  .event__content-text {
+    max-width: 405px;
+    margin-bottom: 250px;
+  }
+  .event__content-text span {
+    font-size: 20px;
+  }
+  .event__item {
+    box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.98), 0 49px 49px 0 rgba(0, 0, 0, 0.85), 0 111px 66px 0 rgba(0, 0, 0, 0.5), 0 196px 79px 0 rgba(0, 0, 0, 0.15), 0 307px 86px 0 rgba(0, 0, 0, 0.02);
+    padding: 273px 0 30px 73px;
+  }
+  .event__item-content {
+    padding: 28px 12px;
+    gap: 40px;
+  }
+  .event__item-left {
+    max-width: 355px;
+  }
+  .event__item-left span {
+    font-size: 14px;
+  }
+  .event__item-data {
+    margin-top: 12px;
+  }
+  .event__item-data span {
+    font-size: 37px;
+  }
+  .event__item-button {
+    margin-top: 40px;
+  }
+  .event__item-button span {
+    font-size: 17px;
+  }
+  .event__minotavr {
+    top: 230px;
+  }
+  .event__minotavr img {
+    max-width: 720px;
+  }
+  .event__fon-1024 {
+    display: block;
+  }
+  .event__fon-1366 {
+    display: none;
+  }
+  .event__fon-1024 {
+    top: 130px;
+  }
+  .event__row {
+    padding-bottom: 142px;
   }
 }

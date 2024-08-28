@@ -444,6 +444,15 @@ body {
             z-index: -5;
             clip-path: inset(104px 0 0 0);
         }
+
+        &-1024 {
+            display: none;
+            position: absolute;
+            top: -310px;
+            right: 3px;
+            z-index: -5;
+            clip-path: inset(104px 0 0 0);
+        }
     }
 
     &__Nikolaich {
@@ -578,6 +587,14 @@ body {
             left: 50%;
             transform: translate(-50%, 0);
         }
+    
+        &-1024 {
+            display: none;
+            position: absolute;
+            z-index: -5;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
 
     &__item {
@@ -592,7 +609,7 @@ body {
         box-shadow: 0 21px 47px 0 rgba(0, 0, 0, 0.98), 0 85px 85px 0 rgba(0, 0, 0, 0.85), 0 191px 114px 0 rgba(0, 0, 0, 0.5), 0 339px 136px 0 rgba(0, 0, 0, 0.15), 0 530px 148px 0 rgba(0, 0, 0, 0.02);
 
         &-content {
-            backdrop-filter: blur(76px);
+            backdrop-filter: blur(30px);
             background: rgba(0, 0, 0, 0.5);
             padding: 50px 20px;
             justify-content: space-between;
@@ -984,7 +1001,7 @@ body {
                 padding: 15px;
 
                 &-1 {
-                    max-width: 855px;
+                    max-width: 700px;
                 }
 
                 &-2 {
@@ -1182,6 +1199,220 @@ body {
         & .header__nav {
             margin-top: 21px;
             margin-bottom: 38px;
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .container {
+        padding: 0 75px;
+    }
+
+    .arm {
+        &__line {
+            right: 0;
+
+            & svg {
+                width: 115px;
+                height: 278px;
+            }
+        }
+    }
+
+    .gallery {
+        margin-bottom: 100px;
+
+        &__title {
+            margin-bottom: 45px;
+
+            &-text {
+                font-size: 83px;
+            }
+
+            &-right {
+                margin-top: 25px;
+            
+                & svg {
+                    max-width: 75px;
+                }
+            }
+        }
+    }
+
+    .marquee-item {
+        max-width: 375px;
+        max-height: 250px;
+    }
+
+    .marquee-item2 {
+        max-width: 375px;
+        max-height: 250px;
+    }
+
+    .federation {
+        margin-bottom: 100px;
+
+        &__row {
+            padding-bottom: 30px;
+        }
+
+        &__text {
+            gap: 20px;
+
+            &-block {
+                &-1 {
+                    max-width: 500px;
+                }
+
+                &-2 {
+                    max-width: 480px;
+                }
+
+                &-3 {
+                    max-width: 455px;
+                }
+            }
+
+            &-item {
+                font-size: 20px
+            }
+        }
+
+        & .gallery__title {
+            margin-left: 75px;
+        }
+
+        &__line {
+            display: none;
+
+            &-1024 {
+                display: block;
+                clip-path: none;
+                top: -202px;
+            }
+
+            &-1366 {
+                display: none;
+            }
+        }
+
+        &__Nikolaich {
+            top: 85px;
+        }
+
+        &__fon {
+            & svg {
+                max-width: 426px;
+                max-height: 540px;
+            }
+        }
+
+        &__percon {
+            top: 70px;
+            left: -5px;
+
+            & img {
+                max-height: 467px;
+            }
+        }
+
+        &__name {
+            top: 122px;
+            left: 246px;
+            
+            &-full {
+                font-size: 17px;
+            }
+        }
+
+        &__president {
+            padding: 20px 0;
+            max-width: 335px;
+            left: 30px;
+            top: 439px;
+
+            & span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .event {
+        margin-bottom: 100px;
+
+        & .gallery__title-right {
+            margin-top: 110px;
+        }
+
+        &__content {
+            &-text {
+                max-width: 405px;
+                margin-bottom: 250px;
+
+                & span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__item {
+            box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.98), 0 49px 49px 0 rgba(0, 0, 0, 0.85), 0 111px 66px 0 rgba(0, 0, 0, 0.5), 0 196px 79px 0 rgba(0, 0, 0, 0.15), 0 307px 86px 0 rgba(0, 0, 0, 0.02);
+            padding: 273px 0 30px 73px;
+
+            &-content {
+                padding: 28px 12px;
+                gap: 40px;
+            }
+
+            &-left {
+                max-width: 355px;
+
+                & span {
+                    font-size: 14px;
+                }
+            }
+
+            &-data {
+                margin-top: 12px;
+
+                & span {
+                    font-size: 37px;
+                }
+            }
+
+            &-button {
+                margin-top: 40px;
+
+                & span {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        &__minotavr {
+            top: 230px;
+
+            & img {
+                max-width: 720px;
+            }
+        }
+
+        &__fon {
+            &-1024 {
+                display: block;
+            }
+
+            &-1366 {
+                display: none;
+            }
+
+            &-1024 {
+                top: 130px;
+            }
+        }
+
+        &__row {
+            padding-bottom: 142px;
         }
     }
 }
