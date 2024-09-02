@@ -47,15 +47,6 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 
-    const ButtonEvents = document.querySelectorAll('.button__event');
-    const TargetEvent = document.querySelector('.target__event');
-
-    ButtonEvents?.forEach(button => {
-        button?.addEventListener('click', function() {
-            TargetEvent?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
-
     const ButtonContacts = document.querySelectorAll('.button__contact');
     const TargetContact = document.querySelector('.target__contact');
 

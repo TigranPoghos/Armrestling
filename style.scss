@@ -816,10 +816,11 @@ body {
 .Event {
     background: rgba(0, 0, 0, 0.5);
     position: relative;
+    overflow: hidden;
 
     &__row {
         flex-direction: column;
-        padding: 366px 0 123px 0;
+        padding: 337px 0 123px 0;
         box-sizing: border-box;
     }
 
@@ -845,7 +846,7 @@ body {
 
     &__subtitle {
         max-width: 730px;
-        margin-bottom: 200px;
+        margin-bottom: 155px;
 
         & span {
             font-weight: 500;
@@ -863,7 +864,7 @@ body {
         opacity: .8;
         font-family: "Zen Kaku Gothic New";
         line-height: 1;
-        margin-bottom: 59px;
+        margin-bottom: 43px;
     }
 
     &__tournament {
@@ -900,17 +901,79 @@ body {
 
     &__fon {
         position: absolute;
-        bottom: 100px;
+        bottom: 75px;
         transform: translate(-50%, 0);
         left: 50%;
-        filter: blur(20px);
         z-index: -5;
+
+        & img {
+            width: auto;
+        }
     }
 
     &__line {
-        top: 0;
-        right: 0;
+        top: -54px;
+        right: -105px;
         position: absolute;
+
+        &-1366 {
+            top: 0;
+            right: 0;
+            position: absolute;
+            display: none;
+        }
+
+        &-1024 {
+            display: none;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        &-768 {
+            display: none;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+    }
+}
+
+.faq__top {
+    &-row {
+        flex-direction: column;
+        padding-top: 336px;
+        padding-bottom: 106px;
+    }
+
+    &-title {
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        margin-bottom: 33px;
+
+        & span {
+            font-weight: 900;
+            font-size: 169px;
+            color: #fff;
+            font-family: "Zen Kaku Gothic New";
+            line-height: 1;
+        }
+
+        & svg {
+            margin-top: 35px;
+        }
+    }
+
+    &-subtitle {
+        & span {
+            font-weight: 500;
+            font-size: 40px;
+            color: #fff;
+            opacity: 0.8;
+            font-family: "Zen Kaku Gothic New";
+        }
     }
 }
 
@@ -1217,6 +1280,79 @@ body {
             margin-bottom: 38px;
         }
     }
+
+    .Event {
+        &__row {
+            padding: 264px 0 98px 0;
+        }
+
+        &__title {
+            margin-bottom: 39px;
+
+            & span {
+                font-size: 133px;
+            }
+
+            & svg {
+                max-width: 133px;
+                max-height: 89px;
+                margin-top: 30px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 117px;
+            max-width: 565px;
+
+            & span {
+                font-size: 31px;
+            }
+        }
+
+        &__line {
+            display: none;
+
+            &-1366 {
+                display: block;
+                top: -42px;
+                right: -83px;
+            }
+        }
+
+        &__year {
+            font-size: 133px;
+            margin-bottom: 35px;
+        }
+
+        &__tournament {
+            gap: 8px;
+            margin-bottom: 16px;
+
+            &-name {
+                font-size: 31px;
+            }
+
+            &-data {
+                font-size: 31px;
+            }
+        }
+
+        &__info {
+            max-width: 742px;
+
+            & span {
+                font-size: 31px;
+            }
+        }
+
+        &__fon {
+            bottom: 61px;
+
+            & img {
+                max-width: 830px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1366px) {
@@ -1454,6 +1590,83 @@ body {
 
         &__fon {
             top: 15px;
+        }
+    }
+
+    .Event {
+        &__row {
+            padding: 198px 0 88px 0;
+        }
+
+        &__title {
+            margin-bottom: 25px;
+
+            & span {
+                font-size: 99px;
+            }
+
+            & svg {
+                max-width: 101px;
+                max-height: 67px;
+                margin-top: 30px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 95px;
+            max-width: 420px;
+
+            & span {
+                font-size: 23px;
+            }
+        }
+
+        &__line {
+            display: none;
+
+            &-1366 {
+                display: none;
+            }
+
+            &-1024 {
+                display: block;
+                top: -32px;
+                right: -62px;
+            }
+        }
+
+        &__year {
+            font-size: 99px;
+            margin-bottom: 27px;
+        }
+
+        &__tournament {
+            gap: 6px;
+            margin-bottom: 12px;
+
+            &-name {
+                font-size: 23px;
+            }
+
+            &-data {
+                font-size: 23px;
+            }
+        }
+
+        &__info {
+            max-width: 742px;
+
+            & span {
+                font-size: 23px;
+            }
+        }
+
+        &__fon {
+            bottom: 61px;
+
+            & img {
+                max-width: 622px;
+            }
         }
     }
 }
@@ -1795,4 +2008,86 @@ body {
             top: -60px;
         }
     }
+
+    .Event {
+        &__row {
+            padding: 120px 0 71px 0;
+        }
+
+        &__title {
+            margin-bottom: 45px;
+
+            & span {
+                font-size: 70px;
+            }
+
+            & svg {
+                max-width: 75px;
+                max-height: 51px;
+                margin-top: 15px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 64px;
+            max-width: 345px;
+
+            & span {
+                font-size: 19px;
+            }
+        }
+
+        &__line {
+            display: none;
+
+            &-1366 {
+                display: none;
+            }
+
+            &-1024 {
+                display: none;
+            }
+
+            &-768 {
+                top: -24px;
+                right: -47px;
+                display: block;
+            }
+        }
+
+        &__year {
+            font-size: 74px;
+            margin-bottom: 14px;
+        }
+
+        &__tournament {
+            gap: 5px;
+            margin-bottom: 5px;
+
+            &-name {
+                font-size: 19px;
+            }
+
+            &-data {
+                font-size: 19px;
+            }
+        }
+
+        &__info {
+            max-width: 455px;
+
+            & span {
+                font-size: 19px;
+            }
+        }
+
+        &__fon {
+            bottom: 42px;
+
+            & img {
+                max-width: 466px;
+            }
+        }
+    }
 }
+
