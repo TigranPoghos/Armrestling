@@ -220,7 +220,6 @@ body {
     & .container {
         position: relative;
         height: 100%;
-        padding: 0 66px;
     }
 
     &__fon {
@@ -453,6 +452,15 @@ body {
             z-index: -5;
             clip-path: inset(104px 0 0 0);
         }
+
+        &-768 {
+            display: none;
+            position: absolute;
+            top: -310px;
+            right: 3px;
+            z-index: -5;
+            clip-path: inset(104px 0 0 0);
+        }
     }
 
     &__Nikolaich {
@@ -589,6 +597,14 @@ body {
         }
     
         &-1024 {
+            display: none;
+            position: absolute;
+            z-index: -5;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &-768 {
             display: none;
             position: absolute;
             z-index: -5;
@@ -1413,6 +1429,370 @@ body {
 
         &__row {
             padding-bottom: 142px;
+        }
+    }
+
+    .partner {
+        margin-bottom: 100px;
+
+        & .gallery__title-right {
+            margin-top: 110px;
+        }
+
+        &__item {
+            margin-top: 130px;
+            gap: 39px;
+            max-width: 630px;
+            margin-bottom: 156px;
+
+            &-block {
+                & img {
+                    max-width: 184px;
+                }
+            }
+        }
+
+        &__fon {
+            top: 15px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        &__title {
+            margin-top: 45px;
+            margin-bottom: 9px;
+
+            &-text {
+                font-size: 56px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 25px;
+            font-size: 10px;
+        }
+
+        &__contact {
+            margin-bottom: 40px;
+
+            &-middle {
+                max-width: 276px;
+                max-height: 148px;
+            }
+
+            &-left {
+                margin-top: 23px;
+                margin-right: 65px;
+                gap: 52px;
+
+                & a:first-child svg {
+                    width: 37px;
+                    height: 24px;
+                }
+
+                & a:last-child svg {
+                    width: 19px;
+                    height: 27px;
+                }
+            }
+
+            &-right {
+                margin-top: 23px;
+                margin-left: 65px;
+                gap: 52px;
+
+                & a:first-child svg {
+                    width: 33px;
+                    height: 27px;
+                }
+
+                & a:last-child svg {
+                    width: 17px;
+                    height: 27px;
+                }
+            }
+        }
+
+        &__line {
+            & svg {
+                width: 471px;
+                height: 2px;
+            }
+        }
+
+        & .header__nav {
+            margin-top: 13px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .header {
+        &__menu {
+            &-ul {
+                gap: 15px;
+            }
+
+            &-item {
+                font-size: 10px;
+                line-height: 1;
+            }
+        }
+
+        &__logo {
+            & svg {
+                max-width: 35px;     
+            }
+        }
+
+        &__nav {
+            margin-bottom: 3px;
+        }
+
+        &__line {
+            height: 2px;
+        }
+    }
+
+    .arm {
+        &__line {
+            & svg {
+                width: 87px;
+                height: 178px;
+            }
+        }
+    }
+
+    .container {
+        padding: 0 50px;
+    }
+
+    .gallery {
+        margin-bottom: 100px;
+
+        &__title {
+            margin-bottom: 35px;
+
+            &-text {
+                font-size: 60px;
+            }
+
+            &-right {
+                margin-top: 20px;
+            
+                & svg {
+                    max-width: 57px;
+                }
+            }
+        }
+    }
+
+    .marquee-item {
+        max-width: 300px;
+        max-height: 190px;
+    }
+
+    .marquee-item2 {
+        max-width: 300px;
+        max-height: 190px;
+    }
+
+    .federation {
+        margin-bottom: 100px;
+
+        &__row {
+            padding-bottom: 6px;
+        }
+
+        &__text {
+            gap: 15px;
+
+            &-block {
+                &-1 {
+                    max-width: 400px;
+                }
+
+                &-2 {
+                    max-width: 380px;
+                }
+
+                &-3 {
+                    max-width: 350px;
+                }
+            }
+
+            &-item {
+                font-size: 15px
+            }
+        }
+
+        & .gallery__title {
+            margin-left: 50px;
+        }
+
+        &__line {
+            display: none;
+
+            &-1024 {
+                display: none;
+            }
+
+            &-1366 {
+                display: none;
+            }
+
+            &-768 {
+                display: block;
+                clip-path: inset(35px 0 0 0);
+                top: -140px;
+            }
+        }
+
+        &__Nikolaich {
+            top: 70px;
+        }
+
+        &__fon {
+            & svg {
+                max-width: 319px;
+                max-height: 406px;
+            }
+        }
+
+        &__percon {
+            top: 53px;
+            left: -3px;
+
+            & img {
+                max-height: 350px;
+            }
+        }
+
+        &__name {
+            top: 88px;
+            left: 185px;
+            
+            &-full {
+                font-size: 12px;
+            }
+        }
+
+        &__president {
+            padding: 10px 0;
+            max-width: 250px;
+            left: 20px;
+            top: 340px;
+
+            & span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .event {
+        margin-bottom: 100px;
+
+        & .gallery__title-right {
+            margin-top: 80px;
+        }
+
+        &__content {
+            &-text {
+                max-width: 300px;
+                margin-bottom: 188px;
+                padding: 10px;
+
+                & span {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &__item {
+            box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.98), 0 37px 37px 0 rgba(0, 0, 0, 0.85), 0 83px 50px 0 rgba(0, 0, 0, 0.5), 0 147px 59px 0 rgba(0, 0, 0, 0.15), 0 230px 64px 0 rgba(0, 0, 0, 0.02);
+            padding: 206px 0 23px 65px;
+
+            &-content {
+                padding: 20px 10px;
+                gap: 35px;
+            }
+
+            &-left {
+                max-width: 250px;
+
+                & span {
+                    font-size: 10px;
+                }
+            }
+
+            &-data {
+                margin-top: 10px;
+
+                & span {
+                    font-size: 27px;
+                }
+            }
+
+            &-button {
+                margin-top: 27px;
+
+                & span {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &__minotavr {
+            top: 163px;
+
+            & img {
+                max-width: 540px;
+            }
+        }
+
+        &__fon {
+            &-1366 {
+                display: none;
+            }
+
+            &-1024 {
+                display: none;
+            }
+
+            &-768 {
+                display: block;
+                top: 88px;
+            }
+        }
+
+        &__row {
+            padding-bottom: 104px;
+        }
+    }
+
+    .partner {
+        margin-bottom: 100px;
+
+        & .gallery__title-right {
+            margin-top: 80px;
+        }
+
+        &__item {
+            margin-top: 130px;
+            gap: 29px;
+            max-width: 472px;
+            margin-bottom: 126px;
+
+            &-block {
+                & img {
+                    max-width: 138px;
+                }
+            }
+        }
+
+        &__fon {
+            top: -60px;
         }
     }
 }
