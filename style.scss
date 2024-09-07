@@ -940,6 +940,8 @@ body {
 }
 
 .faq__top {
+    background-color: #000000;
+    
     &-row {
         flex-direction: column;
         padding-top: 336px;
@@ -973,6 +975,98 @@ body {
             color: #fff;
             opacity: 0.8;
             font-family: "Zen Kaku Gothic New";
+        }
+    }
+}
+
+.faq__bottom {
+    &-row {
+        flex-direction: column;
+        margin: 100px 0;
+        gap: 20px;
+    }
+
+    &-item {
+        background: #000;
+        max-width: 1169px;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+
+        & span {
+            font-weight: 500;
+            font-size: 40px;
+            color: #fff;
+            font-family: 'Zen Kaku Gothic New';
+        }
+
+        &-svg path {
+            transition: stroke 1s ease;
+            stroke: #ff0000;
+        }
+
+        &-svg {
+            transition: transform 1s ease;
+
+            &.active {
+                transform: rotate(180deg);
+            }
+
+            &.active path {
+                stroke: #fff;
+            }
+        }
+
+        &-active {
+            display: none;
+            
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    &-line {
+        width: 0;
+        background-color: #fff;
+        height: 1px;
+        transition: width 1s ease;
+
+        &.active {
+            width: 100%;
+        }
+    }
+
+    &-answer {
+        font-weight: 500;
+        font-size: 40px;
+        color: #fff;
+        font-family: 'Zen Kaku Gothic New';
+        padding: 0 40px;
+        height: 0;
+        overflow: hidden;
+        transition: height 1s ease, padding 0.4s ease;
+
+        &.active {
+            height: auto;
+            padding: 20px 40px;
+
+            & .faq__bottom-answer-text {
+                opacity: 1;
+            }
+        }
+
+        &-text {
+            opacity: 0;
+            transition: opacity 1s ease 1s;
         }
     }
 }
