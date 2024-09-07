@@ -935,7 +935,7 @@ body {
 }
 .faq__bottom-answer-text {
   opacity: 0;
-  transition: opacity 1s ease 1s;
+  transition: opacity 1s ease 0.2s;
 }
 
 @media (max-width: 1740px) {

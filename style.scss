@@ -941,7 +941,7 @@ body {
 
 .faq__top {
     background-color: #000000;
-    
+
     &-row {
         flex-direction: column;
         padding-top: 336px;
@@ -1066,7 +1066,7 @@ body {
 
         &-text {
             opacity: 0;
-            transition: opacity 1s ease 1s;
+            transition: opacity 1s ease .2s;
         }
     }
 }

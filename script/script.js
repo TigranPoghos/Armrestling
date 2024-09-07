@@ -1,28 +1,24 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+    //Галерея
     const marquee = document.querySelector('.marquee');
     const containerWidth = document.querySelector('.marquee-container')?.offsetWidth;
     const marqueeWidth = marquee?.scrollWidth;
-
     const animationDuration = (marqueeWidth / 100) + 's';
-
     if (marquee) {
         marquee.style.animationDuration = animationDuration;
     }
-
-
 
     const marquee2 = document.querySelector('.marquee2');
     const containerWidth2 = document.querySelector('.marquee-container2')?.offsetWidth;
     const marqueeWidth2 = marquee2?.scrollWidth;
     const animationDuration2 = (marqueeWidth2 / 100) + 's';
-
     if (marquee2) {
         marquee2.style.animationDuration = animationDuration2;
     }
 
 
-
+    //прелоадер
     const preloader = document.querySelector('.preloader');
     const bodyIndex = document.querySelector('.body__index')
 
@@ -37,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
 
 
-
+    //переход по странице с кнопок меню
     const ButtonPartners = document.querySelectorAll('.button__partner');
     const TargetPartner = document.querySelector('.target__partner');
 
@@ -109,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
+    //Вопросы
     document.addEventListener('click', function(event) {
         const isClickInside = event.target.closest('.FaqJs__item');
     
@@ -122,19 +118,18 @@ document.addEventListener("DOMContentLoaded", function(){
                 if (FaqJs__answer && FaqJs__answer.classList.contains('active')) {
                     FaqJs__answer.classList.remove('show-text');
                     setTimeout(() => {
-                        FaqJs__answer.style.height = '0'; // Сворачиваем ответ
+                        FaqJs__answer.style.height = '0';
                         FaqJs__answer.classList.remove('active');
-                    }, 400); // Время задержки для завершения анимации текстового блока
+                    }, 400);
                 }
                 if (FaqJs__svg) FaqJs__svg.classList.remove('active');
                 if (FaqJs__line) FaqJs__line.classList.remove('active');
             });
         }
     });
-    
     document.querySelectorAll('.FaqJs__item').forEach(item => {
         item.addEventListener('click', function(event) {
-            event.stopPropagation(); // Предотвращаем всплытие события клика
+            event.stopPropagation();
     
             const FaqJs__answer = item.querySelector('.FaqJs__answer');
             const FaqJs__svg = item.querySelector('.FaqJs__svg');  
@@ -149,9 +144,9 @@ document.addEventListener("DOMContentLoaded", function(){
                     if (siblingAnswer) {
                         siblingAnswer.classList.remove('show-text');
                         setTimeout(() => {
-                            siblingAnswer.style.height = '0'; // Скрываем ответ
+                            siblingAnswer.style.height = '0';
                             siblingAnswer.classList.remove('active');
-                        }, 400); // Время задержки для завершения анимации текстового блока
+                        }, 400);
                     }
                     if (siblingSvg) siblingSvg.classList.remove('active');
                     if (siblingLine) siblingLine.classList.remove('active');
@@ -161,15 +156,15 @@ document.addEventListener("DOMContentLoaded", function(){
             if (FaqJs__answer.classList.contains('active')) {
                 FaqJs__answer.classList.remove('show-text');
                 setTimeout(() => {
-                    FaqJs__answer.style.height = '0'; // Сворачиваем ответ
+                    FaqJs__answer.style.height = '0';
                     FaqJs__answer.classList.remove('active');
-                }, 400); // Время задержки для завершения анимации текстового блока
+                }, 400);
             } else {
                 FaqJs__answer.classList.add('active');
-                FaqJs__answer.style.height = FaqJs__answer.scrollHeight + 'px'; // Раскрываем ответ
+                FaqJs__answer.style.height = FaqJs__answer.scrollHeight + 'px';
                 setTimeout(() => {
-                    FaqJs__answer.classList.add('show-text'); // Добавляем класс для текста
-                }, 400); // Время задержки для завершения анимации высоты блока
+                    FaqJs__answer.classList.add('show-text'); 
+                }, 400);
             }
     
             if (FaqJs__svg) FaqJs__svg.classList.toggle('active');
