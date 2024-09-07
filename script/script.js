@@ -65,41 +65,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
-    // document.querySelectorAll('.FaqJs__item')?.forEach(item => {
-    //     item?.addEventListener('click', function() { 
-    //         const FaqJs__answer = item.querySelector('.FaqJs__answer');
-    //         const FaqJs__svg = item.querySelector('.FaqJs__svg');  
-    //         const FaqJs__line = item.querySelector('.FaqJs__line');  
-    
-    //         document.querySelectorAll('.FaqJs__item')?.forEach(siblingitem => {
-    //             if (siblingitem !== item) {
-    //                 const siblingAnswer = siblingitem.querySelector('.FaqJs__answer');
-    //                 const siblingSvg = siblingitem.querySelector('.FaqJs__svg');
-    //                 const siblingLine = siblingitem.querySelector('.FaqJs__line');
-    
-    //                 if (siblingAnswer) {
-    //                     siblingAnswer.style.height = '0'; // Скрываем ответ
-    //                     siblingAnswer.classList.remove('active');
-    //                 }
-    //                 if (siblingSvg) siblingSvg.classList.remove('active');
-    //                 if (siblingLine) siblingLine.classList.remove('active');
-    //             }
-    //         });
-    
-    //         if (FaqJs__answer.classList.contains('active')) {
-    //             FaqJs__answer.style.height = '0'; // Сворачиваем ответ
-    //             FaqJs__answer.classList.remove('active');
-    //         } else {
-    //             FaqJs__answer.classList.add('active');
-    //             FaqJs__answer.style.height = FaqJs__answer.scrollHeight + 'px'; // Раскрываем ответ
-    //         }
-    
-    //         if (FaqJs__svg) FaqJs__svg.classList.toggle('active');
-    //         if (FaqJs__line) FaqJs__line.classList.toggle('active');
-    //     });
-    // });
     
 
 

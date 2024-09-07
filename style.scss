@@ -211,6 +211,8 @@ body {
     flex: 1 0 auto;  
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 
 .arm {
@@ -982,8 +984,9 @@ body {
 .faq__bottom {
     &-row {
         flex-direction: column;
-        margin: 100px 0;
+        margin: 100px 0 200px;
         gap: 20px;
+        position: relative;
     }
 
     &-item {
@@ -1069,6 +1072,21 @@ body {
             transition: opacity 1s ease .2s;
         }
     }
+
+    &-minotavr {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%,0);
+        filter: blur(20px)
+    }
+}
+
+.faq__line {
+    position: absolute;
+    z-index: 2;
+    top: -54px;
+    right: -105px;
 }
 
 @media (max-width: 1740px) {
