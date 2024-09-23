@@ -1009,6 +1009,8 @@ body {
             font-size: 40px;
             color: #fff;
             font-family: 'Zen Kaku Gothic New';
+            overflow-wrap: break-word;
+            max-width: 1000px;
         }
 
         &-svg path {
@@ -1043,6 +1045,7 @@ body {
         height: 1px;
         transition: width 1s ease;
 
+
         &.active {
             width: 100%;
         }
@@ -1070,15 +1073,31 @@ body {
         &-text {
             opacity: 0;
             transition: opacity 1s ease .2s;
+            overflow-wrap: break-word;
         }
     }
 
     &-minotavr {
         position: absolute;
-        top: 200px;
         left: 50%;
         transform: translate(-50%,0);
-        filter: blur(20px)
+        filter: blur(20px);
+        pointer-events: none;
+        top: 200px;
+        white-space: nowrap;
+        width: max-content;
+
+        &-1366 {
+            display: none;
+        }
+
+        &-1024 {
+            display: none;
+        }
+
+        &-768 {
+            display: none;
+        }
     }
 }
 
@@ -1087,6 +1106,7 @@ body {
     z-index: 2;
     top: -54px;
     right: -105px;
+    pointer-events: none;
 }
 
 @media (max-width: 1740px) {
@@ -1465,6 +1485,76 @@ body {
             }
         }
     }
+
+    .faq {
+        &__top {
+            &-row {
+                padding-top: 263px;
+                padding-bottom: 110px;
+            }
+
+            &-title {
+                margin-bottom: 28px;
+
+                & span {
+                    font-size: 133px;
+                }
+
+                & svg {
+                    width: 134px;
+                    height: 89px;
+                    margin-top: 30px;
+                }
+            }
+
+            &-subtitle {
+                & span {
+                    font-size: 31px;
+                }
+            }
+        }
+
+        &__line {
+            width: 570px;
+            height: 988px;
+        }
+
+        &__bottom {
+            &-row {
+                margin-top: 75px;
+                margin-bottom: 150px;
+            }
+
+            &-minotavr {
+                top: 75px;
+
+                &-1740 {
+                    display: none;
+                }
+
+                &-1366 {
+                    display: block;
+                }
+            }
+
+            &-question {
+                padding: 18px 40px;
+                
+                & span {
+                    font-size: 31px;
+                    max-width: 830px;
+                }
+            }
+
+            &-answer {
+                font-size: 31px;
+            }
+
+            &-item {
+                max-width: 1000px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1366px) {
@@ -1778,6 +1868,80 @@ body {
 
             & img {
                 max-width: 622px;
+            }
+        }
+    }
+
+    .faq {
+        &__top {
+            &-row {
+                padding-top: 198px;
+                padding-bottom: 84px;
+            }
+
+            &-title {
+                margin-bottom: 20px;
+
+                & span {
+                    font-size: 99px;
+                }
+
+                & svg {
+                    width: 100px;
+                    height: 66px;
+                    margin-top: 22px;
+                }
+            }
+
+            &-subtitle {
+                & span {
+                    font-size: 23px;
+                }
+            }
+        }
+
+        &__line {
+            width: 428px;
+            height: 741px;
+        }
+
+        &__bottom {
+            &-row {
+                margin-top: 50px;
+                margin-bottom: 100px;
+            }
+
+            &-minotavr {
+                top: 75px;
+
+                &-1740 {
+                    display: none;
+                }
+
+                &-1366 {
+                    display: none;
+                }
+
+                &-1024 {
+                    display: block;
+                }
+            }
+
+            &-question {
+                padding: 15px 20px;
+                
+                & span {
+                    font-size: 23px;
+                    max-width: 590px;
+                }
+            }
+
+            &-answer {
+                font-size: 23px;
+            }
+
+            &-item {
+                max-width: 700px;
             }
         }
     }
@@ -2198,6 +2362,89 @@ body {
 
             & img {
                 max-width: 466px;
+            }
+        }
+    }
+
+    .faq {
+        &__top {
+            &-row {
+                padding-top: 149px;
+                padding-bottom: 75px;
+            }
+
+            &-title {
+                margin-bottom: 4px;
+
+                & span {
+                    font-size: 70px;
+                }
+
+                & svg {
+                    width: 75px;
+                    height: 50px;
+                    margin-top: 14px;
+                }
+            }
+
+            &-subtitle {
+                & span {
+                    font-size: 19px;
+                }
+            }
+        }
+
+        &__line {
+            width: 321px;
+            height: 556px;
+        }
+
+        &__bottom {
+            &-row {
+                margin-top: 50px;
+                margin-bottom: 100px;
+            }
+
+            &-minotavr {
+                top: 75px;
+
+                &-1740 {
+                    display: none;
+                }
+
+                &-1366 {
+                    display: none;
+                }
+
+                &-1024 {
+                    display: none;
+                }
+
+                &-768 {
+                    display: block;
+                }
+            }
+
+            &-question {
+                padding: 11px 20px;
+                
+                & span {
+                    font-size: 19px;
+                    max-width: 440px;
+                }
+
+                &-svg {
+                    width: 26px;
+                    height: 15px;
+                }
+            }
+
+            &-answer {
+                font-size: 19px;
+            }
+
+            &-item {
+                max-width: 550px;
             }
         }
     }
