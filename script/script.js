@@ -139,4 +139,17 @@ document.addEventListener("DOMContentLoaded", function(){
     
 
 
+
+
+
+
+
+    //бургер
+    $('#menu-toggle').click(function(){
+        $(this).toggleClass('open');
+      })
+
+
+
+
 })

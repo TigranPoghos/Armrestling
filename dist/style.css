@@ -971,6 +971,113 @@ body {
   pointer-events: none;
 }
 
+.burger {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #0b0000;
+  opacity: 0.8;
+  padding: 25px 16px;
+  box-sizing: border-box;
+  display: none;
+}
+.burger .header__menu-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+}
+.burger .header__menu-item {
+  font-size: 31px;
+  font-weight: 900;
+  text-transform: none;
+  font-family: "Zen Kaku Gothic New";
+}
+
+* {
+  transition: 0.25s ease-in-out;
+  box-sizing: border-box;
+}
+
+#menu-toggle {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  display: none;
+}
+#menu-toggle #hamburger {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#menu-toggle #hamburger span {
+  width: 30px;
+  height: 3px;
+  position: relative;
+  top: 12px;
+  left: 10px;
+  margin: 5px 0;
+}
+#menu-toggle #hamburger span:nth-child(1) {
+  transition-delay: 0.5s;
+}
+#menu-toggle #hamburger span:nth-child(2) {
+  transition-delay: 0.625s;
+}
+#menu-toggle #hamburger span:nth-child(3) {
+  transition-delay: 0.75s;
+}
+#menu-toggle #cross {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+}
+#menu-toggle #cross span:nth-child(1) {
+  height: 0%;
+  width: 2px;
+  position: absolute;
+  top: 10%;
+  left: 24px;
+  transition-delay: 0s;
+}
+#menu-toggle #cross span:nth-child(2) {
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 10%;
+  top: 24px;
+  transition-delay: 0.25s;
+}
+#menu-toggle span {
+  display: block;
+  background: #110101;
+  border-radius: 2px;
+}
+
+#menu-toggle.open #hamburger span {
+  width: 0%;
+}
+#menu-toggle.open #hamburger span:nth-child(1) {
+  transition-delay: 0s;
+}
+#menu-toggle.open #hamburger span:nth-child(2) {
+  transition-delay: 0.125s;
+}
+#menu-toggle.open #hamburger span:nth-child(3) {
+  transition-delay: 0.25s;
+}
+#menu-toggle.open #cross span:nth-child(1) {
+  height: 80%;
+  transition-delay: 0.625s;
+}
+#menu-toggle.open #cross span:nth-child(2) {
+  width: 80%;
+  transition-delay: 0.375s;
+}
+
 @media (max-width: 1740px) {
   .header__logo svg {
     max-width: 52px;
@@ -1930,5 +2037,35 @@ body {
   }
   .faq__bottom-item {
     max-width: 550px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .header {
+    margin-top: 0;
+    position: fixed;
+    box-sizing: border-box;
+  }
+  .header__row {
+    padding: 8px 20px;
+    justify-content: space-between;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__logo svg {
+    max-width: 76px;
+  }
+  .header .container {
+    background-color: #A80000;
+    width: 100%;
+  }
+  #menu-toggle {
+    display: flex;
+  }
+  .burger {
+    display: flex;
   }
 }
