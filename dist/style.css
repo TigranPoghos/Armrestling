@@ -126,6 +126,9 @@ body {
   flex: 0 0 auto;
   background-color: #000;
 }
+.footer__adapt {
+  display: none;
+}
 .footer__row {
   flex-direction: column;
   text-align: center;
@@ -225,6 +228,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: max-content;
+}
+.arm__text img {
+  display: none;
 }
 .arm__text svg {
   max-width: 100%;
@@ -440,6 +446,9 @@ body {
 .federation__percon img {
   width: auto;
 }
+.federation__percon-adapt {
+  display: none;
+}
 .federation__name {
   position: absolute;
   backdrop-filter: blur(70px);
@@ -450,6 +459,9 @@ body {
   width: max-content;
   top: 266px;
   left: 508px;
+}
+.federation__name-adapt {
+  display: none;
 }
 .federation__name-full {
   font-weight: 500;
@@ -969,11 +981,6 @@ body {
   top: -54px;
   right: -105px;
   pointer-events: none;
-}
-
-* {
-  transition: 0.25s ease-in-out;
-  box-sizing: border-box;
 }
 
 .menu-toggle {
@@ -2076,5 +2083,189 @@ body {
   }
   .menu-toggle {
     display: flex;
+  }
+  .arm__text {
+    top: 127px;
+    transform: translate(-50%, 0);
+  }
+  .arm__text svg {
+    display: none;
+  }
+  .arm__text img {
+    display: block;
+  }
+  .arm__line {
+    right: -42px;
+  }
+  .arm__line svg {
+    width: 132px;
+    height: 185px;
+  }
+  .gallery {
+    margin-bottom: 50px;
+  }
+  .gallery__title {
+    margin-bottom: 15px;
+  }
+  .gallery__title-text {
+    font-size: 70px;
+  }
+  .gallery__title-right {
+    display: none;
+  }
+  .gallery__title-line {
+    display: none;
+  }
+  .federation {
+    margin-bottom: 50px;
+  }
+  .federation__line-768 {
+    display: none;
+  }
+  .federation .gallery__title {
+    margin-left: 15px;
+  }
+  .federation__name {
+    display: none;
+  }
+  .federation__name-adapt {
+    display: flex;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    margin-left: 15px;
+    margin-bottom: 550px;
+    z-index: 100;
+  }
+  .federation__percon {
+    display: none;
+  }
+  .federation__percon-adapt {
+    display: block;
+  }
+  .federation__fon {
+    display: none;
+  }
+  .federation__Nikolaich {
+    top: 79px;
+    left: -30px;
+  }
+  .federation__president {
+    padding: 10px;
+    max-width: 341px;
+    left: 154px;
+    top: 444px;
+  }
+  .federation__president span {
+    font-size: 31px;
+  }
+  .federation__text {
+    gap: 20px;
+  }
+  .federation__text-block {
+    max-width: 100%;
+    margin: 0 15px;
+    backdrop-filter: blur(20px);
+    padding: 15px;
+  }
+  .federation__text-item {
+    font-size: 31px;
+  }
+  .event {
+    margin-bottom: 50px;
+  }
+  .event__content-text {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .event__content-text span {
+    font-size: 31px;
+  }
+  .event__fon-768 {
+    display: none;
+  }
+  .event__minotavr {
+    display: none;
+  }
+  .event__item {
+    width: 80%;
+    padding: 170px 0 0 0;
+  }
+  .event__item-content {
+    padding: 20px 20px 60px 20px;
+    gap: 35px;
+    width: 100%;
+  }
+  .event__item-left {
+    max-width: 320px;
+  }
+  .event__item-left span {
+    font-size: 20px;
+  }
+  .event__item-data {
+    margin-top: 22px;
+  }
+  .event__item-data span {
+    font-size: 31px;
+  }
+  .event__item-button {
+    margin-top: 40px;
+  }
+  .event__item-button span {
+    font-size: 20px;
+  }
+  .event__row {
+    padding-bottom: 50px;
+  }
+  .partner {
+    margin-bottom: 50px;
+  }
+  .partner__item {
+    margin-top: 90px;
+    margin-bottom: 140px;
+  }
+  .partner__fon {
+    top: -100px;
+  }
+  .footer__title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .footer__subtitle {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+  .footer__contact {
+    margin: 20px auto;
+  }
+  .footer__contact-left {
+    display: none;
+  }
+  .footer__contact-right {
+    display: none;
+  }
+  .footer__contact-middle {
+    max-width: 349px;
+    max-height: 187px;
+  }
+  .footer__adapt {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 65px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer .header__nav {
+    display: none;
+  }
+  .footer__line {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .event__item {
+    width: 100%;
   }
 }
