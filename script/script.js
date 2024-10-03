@@ -148,8 +148,36 @@ document.addEventListener("DOMContentLoaded", function(){
     $('#menu-toggle').click(function(){
         $(this).toggleClass('open');
       })
+    
+    // const burger__js = document.querySelector('.burger__js')
+    // const burger__jsBody = document.querySelector('.burger')
+    // burger__js.addEventListener('click', function(){
+    //     burger__jsBody.classList.toggle('active')
+    // })
 
+    // document.addEventListener('click', (e) => {
 
+    //     if (!burger__jsBody.contains(e.target) && !burger__js.contains(e.target)) {
+    //         burger__jsBody.classList.remove('active');
+    //     }
+    // });
+
+    const burger__js = document.querySelector('.burger__js');
+    const burger__jsBody = document.querySelector('.burger'); 
+    
+    burger__js.addEventListener('click', function(e) {
+        e.stopPropagation();
+        burger__jsBody.classList.toggle('active');
+        burger__js.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!burger__jsBody.contains(e.target) && !burger__js.contains(e.target)) {
+            burger__jsBody.classList.remove('active');
+            burger__js.classList.remove('active');
+        }
+    });
+    
 
 
 })
