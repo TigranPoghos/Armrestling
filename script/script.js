@@ -34,6 +34,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     //переход по странице с кнопок меню
+    function getScrollOffset() {
+        if (window.innerWidth < 574) {
+            return 71;
+        } else if (window.innerWidth < 766) {
+            return 97;
+        }
+        return 0;
+    }
+    
     const ButtonPartners = document.querySelectorAll('.button__partner');
     const TargetPartner = document.querySelector('.target__partner');
     const isOnSecondPage = window.location.pathname.includes('index.html');
@@ -41,19 +50,28 @@ document.addEventListener("DOMContentLoaded", function(){
     ButtonPartners?.forEach(button => {
         button?.addEventListener('click', function() {
             if (isOnSecondPage) {
-                TargetPartner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (TargetPartner) {
+                    const scrollOffset = getScrollOffset();
+                    const targetPosition = TargetPartner.offsetTop - scrollOffset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
             } else {
                 localStorage.setItem('scrollToPartner', true);
                 window.location.href = 'index.html';
             }
         });
     });
+    
     if (isOnSecondPage && localStorage.getItem('scrollToPartner')) {
         if (TargetPartner) {
-            TargetPartner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const scrollOffset = getScrollOffset();
+            const targetPosition = TargetPartner.offsetTop - scrollOffset;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
         localStorage.removeItem('scrollToPartner');
     }
+    
+    
     
 
 
@@ -68,28 +86,36 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     
+
     const ButtonFederations = document.querySelectorAll('.button__federation');
     const TargetFederation = document.querySelector('.target__federation');
-
+    
     ButtonFederations?.forEach(button => {
         button?.addEventListener('click', function() {
             if (isOnSecondPage) {
-                TargetFederation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (TargetFederation) {
+                    const scrollOffset = getScrollOffset();
+                    const targetPosition = TargetFederation.offsetTop - scrollOffset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
             } else {
                 localStorage.setItem('scrollToFederation', true);
                 window.location.href = 'index.html';
             }
         });
     });
+    
     if (isOnSecondPage && localStorage.getItem('scrollToFederation')) {
         if (TargetFederation) {
-            TargetFederation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const scrollOffset = getScrollOffset();
+            const targetPosition = TargetFederation.offsetTop - scrollOffset;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
         localStorage.removeItem('scrollToFederation');
     }
     
-
-
+    
+    
 
 
     
@@ -121,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     document.querySelectorAll('.FaqJs__item').forEach(item => {
         item.addEventListener('click', function(event) {
-            event.stopPropagation();
     
             const FaqJs__answer = item.querySelector('.FaqJs__answer');
             const FaqJs__svg = item.querySelector('.FaqJs__svg');  
@@ -172,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //бургер
     const burger = document.querySelector('.burger-button');
     const burgerMenu = document.querySelector('.burger');
-    const burgerLines = document.querySelectorAll('.burger-button-line'); // Получаем все линии бургер-кнопки
+    const burgerLines = document.querySelectorAll('.burger-button-line');
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('open');
@@ -194,51 +219,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-    
 
-    //скролл
-    let isScrolling = false; // Флаг для предотвращения зацикливания
-    const largeHeaderHeight = 97; // Высота шапки на экранах от 766px до 575px
-    const smallHeaderHeight = 71; // Высота шапки на экранах 575px и ниже
-  
-    window.addEventListener('wheel', function(event) {
-      const firstScreen = document.querySelector('.arm');
-      const scrollPosition = window.scrollY;
-      const screenWidth = window.innerWidth;
-  
-      // Если уже идет плавный переход, выходим
-      if (isScrolling) return;
-  
-      // Определяем высоту шапки в зависимости от ширины экрана
-      let headerHeight;
-      if (screenWidth <= 574) {
-        headerHeight = smallHeaderHeight; // Для экранов 575px и ниже
-      } else if (screenWidth <= 766) {
-        headerHeight = largeHeaderHeight; // Для экранов от 766px до 575px
-      } else {
-        headerHeight = 0; // Для экранов больше 766px шапка не влияет
-      }
-  
-      // Целевая позиция для скролла
-      const targetScrollPosition = firstScreen.clientHeight - headerHeight;
-  
-      if (event.deltaY > 0 && scrollPosition < targetScrollPosition) {
-        // Если скроллим вниз и находимся на первом экране
-        isScrolling = true;
-        window.scrollTo({
-          top: targetScrollPosition,
-          behavior: 'smooth'
-        });
-        setTimeout(() => isScrolling = false, 500); // Задержка для предотвращения зацикливания
-      } else if (event.deltaY < 0 && scrollPosition > 0 && scrollPosition <= targetScrollPosition) {
-        // Если скроллим вверх и находимся в пределах первого экрана
-        isScrolling = true;
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-        setTimeout(() => isScrolling = false, 500);
-      }
-    });
+
 
 })

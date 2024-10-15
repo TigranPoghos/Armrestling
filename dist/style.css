@@ -78,7 +78,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -1205,7 +1205,7 @@ body {
   }
   .partner__item {
     margin-top: 172px;
-    max-width: 839px;
+    max-width: 855px;
     margin-bottom: 215px;
   }
   .partner__item-block img {
@@ -2043,6 +2043,9 @@ body {
   .header__menu {
     display: none;
   }
+  .header__menu-item:hover {
+    color: #fff;
+  }
   .header__logo svg {
     max-width: 76px;
   }
@@ -2394,16 +2397,16 @@ body {
     margin-bottom: 25px;
     gap: 13px;
   }
-  .footer__adapt svg:nth-child(1) {
+  .footer__adapt a:nth-child(1) svg {
     max-width: 45px;
   }
-  .footer__adapt svg:nth-child(2) {
+  .footer__adapt a:nth-child(2) svg {
     max-width: 24px;
   }
-  .footer__adapt svg:nth-child(3) {
+  .footer__adapt a:nth-child(3) svg {
     max-width: 42px;
   }
-  .footer__adapt svg:nth-child(4) {
+  .footer__adapt a:nth-child(4) svg {
     max-width: 23px;
   }
   .Event__row {
