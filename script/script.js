@@ -20,16 +20,27 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //прелоадер
     const preloader = document.querySelector('.preloader');
-    const bodyIndex = document.querySelector('.body__index')
-
-    function hidePreloader() {
-        preloader.classList.add('preloader--hidden');
-        setTimeout(() => {
-            preloader.style.display = 'none';
-            bodyIndex?.classList.add('active');
-        }, 3000);
+    const bodyIndex = document.querySelector('.body__index');
+    
+    if (!sessionStorage.getItem('preloaderShown')) {
+        preloader.style.display = 'block';
+        preloader?.addEventListener('animationend', () => {
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                bodyIndex?.classList.add('active');
+            }, 3000);
+        });
+        sessionStorage.setItem('preloaderShown', 'true');
+    } else {
+        preloader?.classList.add('hidden');
+        bodyIndex?.classList.add('active');
     }
-    preloader?.addEventListener('animationend', hidePreloader);
+    
+    
+    
+    
+    
     
 
 
@@ -199,25 +210,36 @@ document.addEventListener("DOMContentLoaded", function(){
     const burgerMenu = document.querySelector('.burger');
     const burgerLines = document.querySelectorAll('.burger-button-line');
 
-    burger.addEventListener('click', () => {
+    function toggleBurgerMenu() {
         burger.classList.toggle('open');
         burgerMenu.classList.toggle('active');
 
         burgerLines.forEach(line => {
             line.classList.toggle('active');
         });
-    });
+    }
+
+    burger.addEventListener('click', toggleBurgerMenu);
 
     document.addEventListener('click', (event) => {
         if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
-            burger.classList.remove('open');
-            burgerMenu.classList.remove('active');
-            
-            burgerLines.forEach(line => {
-                line.classList.remove('active');
-            });
+            closeBurgerMenu();
         }
     });
+
+    const navLinks = document.querySelectorAll('.burger-nav');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeBurgerMenu);
+    });
+
+    function closeBurgerMenu() {
+        burger.classList.remove('open');
+        burgerMenu.classList.remove('active');
+
+        burgerLines.forEach(line => {
+            line.classList.remove('active');
+        });
+    }
 
 
 

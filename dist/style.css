@@ -1,4 +1,3 @@
-@charset "UTF-8";
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -34,6 +33,7 @@ body {
 
 html {
   height: 100%;
+  scrollbar-width: thin;
 }
 
 button {
@@ -50,6 +50,24 @@ body {
   flex-direction: column;
   background-color: #1D1D1D;
   overflow-x: hidden;
+  scrollbar-color: #A80000 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A80000;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
 .body__index {
@@ -681,10 +699,10 @@ body {
 }
 @keyframes shrinkContainer {
   0% {
-    width: 90%; /* Начальная ширина */
+    width: 90%;
   }
   100% {
-    width: 70%; /* Конечная ширина после уменьшения */
+    width: 70%;
   }
 }
 @keyframes load {
@@ -696,6 +714,7 @@ body {
   }
 }
 .preloader {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -734,9 +753,7 @@ body {
   animation: load 3s 1s;
 }
 .preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-out, visibility 1s ease-out;
+  display: none;
 }
 
 .Event {
