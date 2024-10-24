@@ -18,32 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 
-    //прелоадер
-    const preloader = document.querySelector('.preloader');
-    const bodyIndex = document.querySelector('.body__index');
     
-    if (!sessionStorage.getItem('preloaderShown')) {
-        preloader.style.display = 'block';
-        preloader?.addEventListener('animationend', () => {
-            preloader.classList.add('hidden');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-                bodyIndex?.classList.add('active');
-            }, 3000);
-        });
-        sessionStorage.setItem('preloaderShown', 'true');
-    } else {
-        preloader?.classList.add('hidden');
-        bodyIndex?.classList.add('active');
-    }
-    
-    
-    
-    
-    
-    
-
-
+  
     //переход по странице с кнопок меню
     function getScrollOffset() {
         if (window.innerWidth < 574) {
@@ -241,6 +217,68 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }
 
+
+
+
+    // Прелоадер
+    const preloader = document.querySelector('.preloader');
+    const bodyIndex = document.querySelector('.body__index');
+
+    if (!sessionStorage.getItem('preloaderShown')) {
+        preloader.style.display = 'block';
+        preloader.addEventListener('animationend', () => {
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                bodyIndex?.classList.add('active');
+                startAnimations();
+            }, 3000);
+        });
+        sessionStorage.setItem('preloaderShown', 'true');
+    } else {
+        preloader?.classList.add('hidden');
+        bodyIndex?.classList.add('active');
+        startAnimations();
+    }
+
+
+
+
+
+    // Анимации
+    function startAnimations() {
+        const logoAnim = document.querySelector('.header__logo svg');
+        if (logoAnim) logoAnim.style.opacity = 1;
+    
+        const menuAnim = document.querySelector('.header__menu');
+        if (menuAnim) menuAnim.style.opacity = 1;
+    
+        const menuItemsAnim = document.querySelectorAll('.header__menu-item');
+        menuItemsAnim.forEach((item, index) => {
+            if (item) {
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    
+        const MenulineAnim = document.querySelector('.header__line');
+        if (MenulineAnim) MenulineAnim.style.width = '100%';
+    
+        const arm__textAnim = document.querySelector('.arm__text');
+        if (arm__textAnim) {
+            arm__textAnim.style.opacity = 1;
+            arm__textAnim.style.transform = 'translate(-50%, -50%)';
+        }
+    
+        const arm__lineAnim = document.querySelector('.arm__line');
+        if (arm__lineAnim) {
+            arm__lineAnim.style.opacity = 1;
+            arm__lineAnim.style.transform = 'translateX(0)';
+        }
+    }
+    
 
 
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -50,24 +51,6 @@ body {
   flex-direction: column;
   background-color: #1D1D1D;
   overflow-x: hidden;
-  scrollbar-color: #A80000 #f1f1f1;
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #A80000;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
 }
 
 .body__index {
@@ -112,6 +95,9 @@ body {
   flex-direction: column;
   width: 100%;
   margin-left: 10px;
+  opacity: 0; /* Изначально невидимо */
+  transition: opacity 1s ease-out; /* Плавный переход */
+  position: relative;
 }
 .header__menu-ul {
   display: flex;
@@ -125,6 +111,8 @@ body {
   color: #fff;
   text-transform: uppercase;
   transition: 1s;
+  opacity: 0; /* Изначально невидимо */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
 }
 .header__menu-item:hover {
   color: #f00;
@@ -134,10 +122,19 @@ body {
   margin-bottom: 10px;
 }
 .header__line {
-  width: 100%;
+  width: 0; /* Изначально ширина 0 */
   height: 3px;
   background-color: #fff;
   border-radius: 20px;
+  position: absolute; /* Абсолютное позиционирование */
+  left: 50%; /* Центрирование линии */
+  transform: translateX(-50%); /* Сдвинуть влево на 50% от ширины */
+  transition: width 1s ease-out; /* Плавный переход */
+  bottom: 0;
+}
+.header__logo svg {
+  opacity: 0;
+  transition: opacity 1s ease-out 1s;
 }
 
 .footer {
@@ -244,10 +241,12 @@ body {
   top: 320px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   max-width: max-content;
+  opacity: 0; /* Изначально невидимо */
+  transform: translate(-150%, -50%); /* Сдвинут влево за экран */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
 }
-.arm__text img {
+.arm__text-adapt {
   display: none;
 }
 .arm__text svg {
@@ -258,6 +257,9 @@ body {
   right: -15px;
   position: absolute;
   z-index: 5;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .gallery {
