@@ -98,7 +98,6 @@ body {
         width: 100%;
         margin-left: 10px;
         opacity: 0;
-        transition: opacity 1s ease-out;
         position: relative;
 
         &-ul {
@@ -113,9 +112,7 @@ body {
             font-size: 20px;
             color: #fff;
             text-transform: uppercase;
-            transition: 1s;
             opacity: 0;
-            transition: opacity 1s ease-out, transform 1s ease-out;
 
             &:hover {
                 color: #f00;
@@ -136,13 +133,11 @@ body {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        transition: width 1s ease-out;
         bottom: 0;
     }
 
     &__logo svg {
         opacity: 0;
-        transition: opacity 1s ease-out 1s;
     }
 }
 
@@ -265,7 +260,7 @@ body {
         transform: translate(-50%, -50%);
         clip-path: inset(0 70%);
         opacity: 0;
-        transition: clip-path 1s ease-out, opacity 1s ease-out;
+        transition: clip-path 1s ease-out;
 
         &-adapt {
             display: none;
@@ -283,7 +278,6 @@ body {
         z-index: 5;
         opacity: 0;
         transform: translateX(100%);
-        transition: opacity 1s ease-out, transform 1s ease-out;
     }
 }
 
@@ -302,7 +296,6 @@ body {
         margin-bottom: 60px;
         transform: translate(-100%, 0);
         opacity: 0;
-        transition: transform 1s ease-out;
 
         &-text {
             font-weight: 900;
@@ -321,7 +314,6 @@ body {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            transition: width 1s ease-out 1s;
             bottom: 0;
         }
 
@@ -341,7 +333,6 @@ body {
 .TitleSvg {
     transform: rotateY(0);
     opacity: 0;
-    transition: transform 1s ease-out 0.5s, opacity 1s ease-out 0.5s;
 }
 
 .marquee-container {
@@ -1309,7 +1300,7 @@ body {
 
     .federation {
         & .gallery__title-text {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         &__line {

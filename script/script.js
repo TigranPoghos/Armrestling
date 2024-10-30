@@ -244,60 +244,78 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-    // Анимации
+    //Анимации
     function startAnimations() {
-        const logoAnim = document.querySelector('.header__logo svg');
-        if (logoAnim) logoAnim.style.opacity = 1;
-    
-        const menuAnim = document.querySelector('.header__menu');
-        if (menuAnim) menuAnim.style.opacity = 1;
-    
-        const menuItemsAnim = document.querySelectorAll('.header__menu-item');
-        menuItemsAnim.forEach((item, index) => {
-            if (item) {
-                setTimeout(() => {
-                    item.style.opacity = 1;
-                    item.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.to(".header__logo svg", {
+            opacity: 1,
+            duration: 1,
+            delay: 1,
         });
     
-        const MenulineAnim = document.querySelector('.header__line');
-        if (MenulineAnim) {
-            MenulineAnim.style.width = '100%';
-        }
+        gsap.to('.header__menu', {
+            opacity: 1,
+            duration: 1,
+        });
     
-        const arm__textAnim = document.querySelector('.arm__text');
-        if (arm__textAnim) {
-            arm__textAnim.style.clipPath = 'inset(0)';
-            arm__textAnim.style.opacity = 1;
-        }        
+        gsap.to('.header__menu-item', {
+            opacity: 1,
+            duration: 1,
+        });
     
-        const arm__lineAnim = document.querySelector('.arm__line');
-        if (arm__lineAnim) {
-            arm__lineAnim.style.opacity = 1;
-            arm__lineAnim.style.transform = 'translateX(0)';
-        }
+        gsap.to('.header__line', {
+            width: '100%',
+            duration: 1,
+        });
 
-        const TitleSvgAnim = document.querySelectorAll('.TitleSvg')
-        const TitlesAnim = document.querySelectorAll('.gallery__title')
-        TitlesAnim.forEach(Title => {
-            if(Title) {
-                Title.style.transform = 'translate(0)';
-                Title.style.opacity = 1;
+        gsap.to('.arm__text', {
+            opacity: 1,
+            clipPath: 'inset(0)',
+            duration: 1,
+        });
+
+        gsap.to('.arm__line', {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+        });
+
+        gsap.to('.gallery__title', {
+            opacity: 1, 
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.gallery__title',
+                start: "50% bottom",
+                end: "50% top",
+                scrub: false,
             }
         })
-        TitleSvgAnim.forEach(TitleSvg => {
-            if (TitleSvg) {
-                TitleSvg.style.transform = 'rotateY(180deg)';
-                TitleSvg.style.opacity = 1;
-        }
+
+        gsap.to('.gallery__title-line', {
+            width: '100%',
+            duration: 1,
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.gallery__title-line',
+                start: "50% bottom",
+                end: "50% top",
+                scrub: false,
+            }
         })
 
-        const TitleLineAnim = document.querySelectorAll('.gallery__title-line');
-        TitleLineAnim.forEach(TitleLine => {
-            if (TitleLine) TitleLine.style.width = '100%';
+        gsap.to('.TitleSvg', {
+            opacity: 1,
+            rotateY: '180deg',
+            duration: 1,
+            delay: 0.5,
+            scrollTrigger: {
+                trigger: '.TitleSvg',
+                start: "50% bottom",
+                end: "50% top",
+                scrub: false,
+            }
         })
     }
     
@@ -306,6 +324,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
 })
+
