@@ -264,21 +264,47 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     
         const MenulineAnim = document.querySelector('.header__line');
-        if (MenulineAnim) MenulineAnim.style.width = '100%';
+        if (MenulineAnim) {
+            MenulineAnim.style.width = '100%';
+        }
     
         const arm__textAnim = document.querySelector('.arm__text');
         if (arm__textAnim) {
+            arm__textAnim.style.clipPath = 'inset(0)';
             arm__textAnim.style.opacity = 1;
-            arm__textAnim.style.transform = 'translate(-50%, -50%)';
-        }
+        }        
     
         const arm__lineAnim = document.querySelector('.arm__line');
         if (arm__lineAnim) {
             arm__lineAnim.style.opacity = 1;
             arm__lineAnim.style.transform = 'translateX(0)';
         }
+
+        const TitleSvgAnim = document.querySelectorAll('.TitleSvg')
+        const TitlesAnim = document.querySelectorAll('.gallery__title')
+        TitlesAnim.forEach(Title => {
+            if(Title) {
+                Title.style.transform = 'translate(0)';
+                Title.style.opacity = 1;
+            }
+        })
+        TitleSvgAnim.forEach(TitleSvg => {
+            if (TitleSvg) {
+                TitleSvg.style.transform = 'rotateY(180deg)';
+                TitleSvg.style.opacity = 1;
+        }
+        })
+
+        const TitleLineAnim = document.querySelectorAll('.gallery__title-line');
+        TitleLineAnim.forEach(TitleLine => {
+            if (TitleLine) TitleLine.style.width = '100%';
+        })
     }
     
+
+
+
+
 
 
 

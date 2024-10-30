@@ -97,8 +97,8 @@ body {
         flex-direction: column;
         width: 100%;
         margin-left: 10px;
-        opacity: 0; /* Изначально невидимо */
-        transition: opacity 1s ease-out; /* Плавный переход */
+        opacity: 0;
+        transition: opacity 1s ease-out;
         position: relative;
 
         &-ul {
@@ -114,8 +114,8 @@ body {
             color: #fff;
             text-transform: uppercase;
             transition: 1s;
-            opacity: 0; /* Изначально невидимо */
-            transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 1s ease-out;
 
             &:hover {
                 color: #f00;
@@ -129,14 +129,14 @@ body {
     }
 
     &__line {
-        width: 0; /* Изначально ширина 0 */
+        width: 0;
         height: 3px;
         background-color: #fff;
         border-radius: 20px;
-        position: absolute; /* Абсолютное позиционирование */
-        left: 50%; /* Центрирование линии */
-        transform: translateX(-50%); /* Сдвинуть влево на 50% от ширины */
-        transition: width 1s ease-out; /* Плавный переход */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 1s ease-out;
         bottom: 0;
     }
 
@@ -259,13 +259,13 @@ body {
     &__text {
         position: relative;
         z-index: 2;
-        top: 320px;
         top: 50%;
         left: 50%;
         max-width: max-content;
-        opacity: 0; /* Изначально невидимо */
-        transform: translate(-150%, -50%); /* Сдвинут влево за экран */
-        transition: opacity 1s ease-out, transform 1s ease-out; /* Плавный переход */
+        transform: translate(-50%, -50%);
+        clip-path: inset(0 70%);
+        opacity: 0;
+        transition: clip-path 1s ease-out, opacity 1s ease-out;
 
         &-adapt {
             display: none;
@@ -300,32 +300,48 @@ body {
         display: flex;
         gap: 1px;
         margin-bottom: 60px;
+        transform: translate(-100%, 0);
+        opacity: 0;
+        transition: transform 1s ease-out;
 
         &-text {
             font-weight: 900;
             font-size: 127px;
             color: #fff;
             font-family: "Zen Kaku Gothic New";
-            line-height: 1
+            line-height: 1;
+            margin-bottom: 20px;
         }
 
         &-line {
             height: 5px;
+            border-radius: 20px;
             background-color: #fff;
-            width: 100%;
+            width: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 1s ease-out 1s;
+            bottom: 0;
         }
 
         &-left {
             display: flex;
             flex-direction: column;
-            gap: 20px;
             margin-right: 5px;
+            position: relative;
         }
 
         &-right {
             margin-top: 30px;
         }
     }
+}
+
+.TitleSvg {
+    transform: rotateY(0);
+    opacity: 0;
+    transition: transform 1s ease-out 0.5s, opacity 1s ease-out 0.5s;
 }
 
 .marquee-container {
@@ -412,6 +428,10 @@ body {
 
     & .gallery__title {
         margin-left: 100px;
+    }
+
+    & .gallery__title-text {
+        margin-bottom: 25px;
     }
 
     &__row {
@@ -1263,12 +1283,9 @@ body {
 
     .gallery {
         &__title {
-            &-left {
-                gap: 10px;
-            }
-
             &-text {
                 font-size: 111px;
+                margin-bottom: 10px;
             }
 
             &-right {
@@ -1291,6 +1308,10 @@ body {
     }
 
     .federation {
+        & .gallery__title-text {
+            margin-bottom: 15px;
+        }
+
         &__line {
             display: none;
 
