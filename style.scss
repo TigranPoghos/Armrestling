@@ -144,6 +144,7 @@ body {
 .footer {
     flex: 0 0 auto;
     background-color: #000;
+    overflow: hidden;
 
     &__adapt {
         display: none;
@@ -162,6 +163,7 @@ body {
         margin-top: 100px;
         margin-bottom: 20px;
         z-index: 2;
+        overflow: hidden;
 
         &-text {
             font-family: "Zen Kaku Gothic New";
@@ -170,6 +172,7 @@ body {
             text-align: center;
             color: #f00;
             line-height: 1;
+            transform: translate(-100%, 0);
         }
     }
 
@@ -181,12 +184,24 @@ body {
         font-family: "Montserrat";
         margin-bottom: 33px;
         z-index: 2;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+
+        & span {
+            transform: translate(100%, 0);
+            display: flex;
+        }
     }
 
     &__contact {
         display: flex;
         margin-bottom: 121px;
         z-index: 2;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: max-content;
+        overflow: hidden;
 
         &-left {
             justify-content: center;
@@ -196,6 +211,10 @@ body {
             margin-right: 118px;
             margin-left: auto;
             margin-top: 47px;
+
+            & a {
+                transform: translateX(-100%);
+            }
         }
 
         &-right {
@@ -206,11 +225,25 @@ body {
             margin-left: 118px;
             margin-right: auto;
             margin-top: 47px;
+            
+            & a {
+                transform: translateX(100%);
+            }
+        }
+
+        &-middle {
+            clip-path: inset(50% 50% 50% 50%);
+            transition: clip-path 1s ease-out;
         }
     }
 
     &__line {
         z-index: 2;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        overflow: hidden;
     }
 
     & .header__nav {
@@ -219,6 +252,10 @@ body {
         margin-bottom: 52px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    &__nav {
+        transform: translate(0, 350%);
     }
 }
 
@@ -448,6 +485,7 @@ body {
             box-sizing: border-box;
             backdrop-filter: blur(70px);
             background: rgba(107, 4, 4, 0.4);
+            transform: translate(100%, 0);
 
             &-1 {
                 max-width: 855px;
@@ -516,12 +554,14 @@ body {
         left: 0;
         top: 0;
         position: absolute;
+        transform: translate(-100%, 0);
     }
 
     &__percon {
         top: 151px;
         left: 3px;
         position: absolute;
+        opacity: 0;
         
         & img {
             width: auto;
@@ -546,6 +586,9 @@ body {
         width: max-content;
         top: 266px;
         left: 508px;
+        clip-path: inset(0 70%);
+        opacity: 0;
+        transition: clip-path 1s ease-out;
 
         &-adapt {
             display: none;
@@ -576,6 +619,9 @@ body {
         backdrop-filter: blur(70px);
         width: max-content;
         padding: 34px 0;
+        clip-path: inset(0 70%);
+        opacity: 0;
+        transition: clip-path 1s ease-out;
 
         & span {
             font-weight: 500;
@@ -593,7 +639,7 @@ body {
 
     &__row {
         flex-direction: column;
-        padding-bottom: 405px;
+        padding-bottom: 450px;
         box-sizing: border-box;
     }
 
@@ -613,6 +659,7 @@ body {
             box-sizing: border-box;
             max-width: 879px;
             margin-bottom: 400px;
+            transform: translate(-120%, 0);
 
             & span {
                 font-weight: 500;
@@ -625,10 +672,13 @@ body {
 
     &__minotavr {
         position: absolute;
-        top: 215px;
+        top: 410px;
         z-index: -100;
         left: 50%;
         transform: translate(-50%, 0);
+        opacity: 0.7;
+        clip-path: inset(50% 50% 50% 50%);
+        transition: clip-path 1s ease-out;
 
         & img {
             width: auto;
@@ -641,6 +691,8 @@ body {
         top: 210px;
         left: 50%;
         transform: translate(-50%, 0);
+        clip-path: inset(50% 50% 50% 50%);
+        transition: clip-path 1s ease-out;
 
         &-1366 {
             display: none;
@@ -648,6 +700,8 @@ body {
             z-index: -5;
             left: 50%;
             transform: translate(-50%, 0);
+            clip-path: inset(50% 50% 50% 50%);
+            transition: clip-path 1s ease-out;
         }
     
         &-1024 {
@@ -656,6 +710,8 @@ body {
             z-index: -5;
             left: 50%;
             transform: translate(-50%, 0);
+            clip-path: inset(50% 50% 50% 50%);
+            transition: clip-path 1s ease-out;
         }
 
         &-768 {
@@ -664,6 +720,8 @@ body {
             z-index: -5;
             left: 50%;
             transform: translate(-50%, 0);
+            clip-path: inset(50% 50% 50% 50%);
+            transition: clip-path 1s ease-out;
         }
     }
 
@@ -676,7 +734,10 @@ body {
         margin-left: auto;
         margin-right: auto;
         background-size: cover;
-        box-shadow: 0 21px 47px 0 rgba(0, 0, 0, 0.98), 0 85px 85px 0 rgba(0, 0, 0, 0.85), 0 191px 114px 0 rgba(0, 0, 0, 0.5), 0 339px 136px 0 rgba(0, 0, 0, 0.15), 0 530px 148px 0 rgba(0, 0, 0, 0.02);
+        box-shadow: -34px 90px 50px 0 rgba(0, 0, 0, 0.7);
+        clip-path: inset(50% 50% 50% 50%);
+        transition: clip-path 1s ease-out;
+        overflow: hidden;
 
         &-content {
             backdrop-filter: blur(30px);
@@ -685,6 +746,7 @@ body {
             justify-content: space-between;
             display: flex;
             gap: 70px;
+            transform: translate(100%, 0);
         }
 
         &-left {
@@ -769,6 +831,8 @@ body {
           }
 
         &-block {
+            opacity: 0;
+
             & img {
                 border-radius: 20px;
                 width: auto;
@@ -783,6 +847,21 @@ body {
         transform: translate(-50%, 0);
         left: 50%;
         width: 100%;
+
+        &-1 {
+            transform: translateX(-110%);
+            opacity: 0;
+        }
+
+        &-2 {
+            opacity: 0;
+            transform: translateX(110%);
+        }
+
+        &-3 {
+            clip-path: inset(50% 50% 50% 50%);
+            transition: clip-path 1s ease-out;
+        }
 
         & svg {
             max-width: 100%;
@@ -1383,7 +1462,7 @@ body {
 
     .event {
         &__row {
-            padding-bottom: 197px;
+            padding-bottom: 230px;
         }
 
         & .gallery__title-right {
@@ -1403,7 +1482,6 @@ body {
 
         &__item {
             padding: 365px 0 38px 97px;
-            box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.98), 0 66px 66px 0 rgba(0, 0, 0, 0.85), 0 148px 88px 0 rgba(0, 0, 0, 0.5), 0 262px 105px 0 rgba(0, 0, 0, 0.15), 0 410px 114px 0 rgba(0, 0, 0, 0.02);  
 
             &-content {
                 padding: 38px 15px;
@@ -1850,7 +1928,6 @@ body {
         }
 
         &__item {
-            box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.98), 0 49px 49px 0 rgba(0, 0, 0, 0.85), 0 111px 66px 0 rgba(0, 0, 0, 0.5), 0 196px 79px 0 rgba(0, 0, 0, 0.15), 0 307px 86px 0 rgba(0, 0, 0, 0.02);
             padding: 273px 0 30px 73px;
 
             &-content {
@@ -1906,7 +1983,7 @@ body {
         }
 
         &__row {
-            padding-bottom: 142px;
+            padding-bottom: 170px;
         }
     }
 
@@ -2343,8 +2420,8 @@ body {
         }
 
         &__item {
-            box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.98), 0 37px 37px 0 rgba(0, 0, 0, 0.85), 0 83px 50px 0 rgba(0, 0, 0, 0.5), 0 147px 59px 0 rgba(0, 0, 0, 0.15), 0 230px 64px 0 rgba(0, 0, 0, 0.02);
             padding: 206px 0 23px 65px;
+            box-shadow: -34px 70px 50px 0 rgba(0, 0, 0, 0.7);
 
             &-content {
                 padding: 20px 10px;
@@ -2400,7 +2477,7 @@ body {
         }
 
         &__row {
-            padding-bottom: 104px;
+            padding-bottom: 117px;
         }
     }
 
@@ -2781,6 +2858,7 @@ body {
         &__item {
             width: 80%;
             padding: 170px 0 0 0;
+            box-shadow: none;
 
             &-content {
                 padding: 20px 20px 60px 20px;

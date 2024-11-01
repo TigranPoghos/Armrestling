@@ -281,40 +281,313 @@ document.addEventListener("DOMContentLoaded", function(){
             duration: 1,
         });
 
-        gsap.to('.gallery__title', {
-            opacity: 1, 
+        document.querySelectorAll('.gallery__title-line').forEach
+        (titleLine => {
+            gsap.to(titleLine, { 
+                width: '100%',
+                duration: 1,
+                delay: 1,
+                scrollTrigger: {
+                    trigger: titleLine,
+                    start: "100% bottom",
+                    scrub: false,
+                }
+            })
+        })
+
+        document.querySelectorAll('.gallery__title').forEach
+        (title => {
+            gsap.to(title, {
+                opacity: 1, 
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: title,
+                    start: "100% bottom",
+                    scrub: false,
+                }
+            })
+        })
+
+        document.querySelectorAll('.TitleSvg').forEach
+        (titlesvg => {
+            gsap.to(titlesvg, {
+                opacity: 1,
+                rotateY: '180deg',
+                duration: 1,
+                delay: 0.5,
+                scrollTrigger: {
+                    trigger: titlesvg,
+                    start: "100% bottom",
+                    scrub: false,
+                }
+            })
+        })
+
+        document.querySelectorAll('.federation__text-block').forEach
+        (text__block => {
+            gsap.to(text__block, {
+                x:0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: text__block,
+                    start: "100% bottom",
+                    scrub: false,
+                }
+            })
+        })
+
+        gsap.to('.federation__fon', {
             x: 0,
             duration: 1,
             scrollTrigger: {
-                trigger: '.gallery__title',
-                start: "50% bottom",
-                end: "50% top",
+                trigger: '.federation__fon',
+                start: "90% bottom",
                 scrub: false,
             }
         })
 
-        gsap.to('.gallery__title-line', {
-            width: '100%',
+        gsap.to('.federation__percon', {
+            opacity: 1,
             duration: 1,
             delay: 1,
             scrollTrigger: {
-                trigger: '.gallery__title-line',
-                start: "50% bottom",
-                end: "50% top",
+                trigger: '.federation__fon',
+                start: "90% bottom",
                 scrub: false,
             }
         })
 
-        gsap.to('.TitleSvg', {
+        gsap.to('.federation__name', {
             opacity: 1,
-            rotateY: '180deg',
+            clipPath: 'inset(0)',
             duration: 1,
-            delay: 0.5,
+            delay: 1,
             scrollTrigger: {
-                trigger: '.TitleSvg',
-                start: "50% bottom",
-                end: "50% top",
+                trigger: '.federation__fon',
+                start: "90% bottom",
                 scrub: false,
+            }
+        })
+
+        gsap.to('.federation__president', {
+            opacity: 1,
+            clipPath: 'inset(0)',
+            duration: 1,
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                start: "90% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__content-text', {
+            x:0,
+            duration:1,
+            scrollTrigger: {
+                trigger: '.event__content-text',
+                start: "100% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__item', {
+            duration: 1,
+            clipPath: 'inset(-150px)',
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__item-content', {
+            x:0,
+            duration: 1,
+            delay: 2,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__minotavr', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__fon', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__fon-1366', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__fon-1024', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.event__fon-768', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.event__item-content',
+                start: "50% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.partner__fon-1', {
+            duration: 1, 
+            x: 0,
+            opacity: 1,
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.partner__item-block',
+                start: '150% bottom',
+                scrub: false,
+            }
+        })
+
+        gsap.to('.partner__fon-3', {
+            duration: 1, 
+            clipPath: 'inset(0 0 0 0)',
+            scrollTrigger: {
+                trigger: '.partner__item-block',
+                start: '150% bottom',
+                scrub: false,
+            }
+        })
+
+        gsap.to('.partner__fon-2', {
+            duration: 1, 
+            x: 0,
+            opacity: 1,
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.partner__item-block',
+                start: '150% bottom',
+                scrub: false
+            }
+        })
+
+        gsap.to('.partner__item-block', {
+            opacity: 1,
+            duration: 1,
+            delay: 2,
+            scrollTrigger: {
+                trigger: '.partner__item-block',
+                start: '150% bottom',
+                scrub: false
+            }
+        })
+
+        document.querySelectorAll('.footer__contact-left a').forEach
+        (contactLeft => {
+            gsap.to(contactLeft, {
+                x: 0,
+                delay: 2,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.footer__contact-middle',
+                    start: '100% bottom',
+                    scrub: false
+                }
+            })
+        }) 
+
+        document.querySelectorAll('.footer__contact-right a').forEach
+        (contactRight => {
+            gsap.to(contactRight, {
+                x: 0,
+                delay: 2,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.footer__contact-middle',
+                    start: '100% bottom',
+                    scrub: false
+                }
+            })
+        })
+
+        gsap.to('.footer__contact-middle', {
+            duration: 1,
+            clipPath: 'inset(0 0 0 0)',
+            scrollTrigger: {
+                trigger: '.footer__contact-middle',
+                start: '100% bottom',
+                scrub: false
+            }
+        }) 
+
+        gsap.to('.footer__title-text', {
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.footer__subtitle span',
+                start: '100% bottom',
+                scrub: false
+            }
+        })
+
+        gsap.to('.footer__subtitle span', {
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.footer__subtitle span',
+                start: '100% bottom',
+                scrub: false
+            }
+        })
+
+        gsap.to('.footer__line', {
+            width: '100%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.footer__line',
+                start: '500% bottom',
+                scrub: false
+            }
+        })
+
+        gsap.to('.footer__nav', {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.footer__line',
+                start: '500% bottom',
+                scrub: false
             }
         })
     }
