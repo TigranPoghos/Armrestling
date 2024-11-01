@@ -905,7 +905,7 @@ body {
     bottom: 0;
     overflow: hidden;
     background: #1D1D1D;
-    z-index: 1001;
+    z-index: 1000000;
     opacity: 1;
 
     &__row {
@@ -1254,11 +1254,6 @@ body {
     pointer-events: none;
 }
 
-
-
-
-
-
 .burger {
     position: absolute;
     top: 100%;
@@ -1300,6 +1295,7 @@ body {
     width: 40px;
     height: 30px;
     display: none;
+    transform: translate(120%, 0);
 
     &-line {
         height: 5px;
@@ -2705,6 +2701,8 @@ body {
         &__logo {
             & svg {
                 max-width: 76px;
+                transform: translate(-120%, 0);
+                opacity: 1;
             }
         }
 
@@ -2786,6 +2784,7 @@ body {
                 margin-left: 15px;
                 margin-bottom: 550px;
                 z-index: 100;
+                transform: translate(-100%, 0);
             }
         }
 
@@ -2794,6 +2793,7 @@ body {
 
             &-adapt {
                 display: block;
+                transform: translate(-100%, 0);
             }
         }
 
@@ -2825,6 +2825,10 @@ body {
                 margin: 0 15px;
                 backdrop-filter: blur(20px);
                 padding: 15px;
+                
+                &-2 {
+                    transform: translate(-100%, 0);
+                }
             }
 
             &-item {

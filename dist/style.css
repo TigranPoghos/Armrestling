@@ -805,7 +805,7 @@ body {
   bottom: 0;
   overflow: hidden;
   background: #1D1D1D;
-  z-index: 1001;
+  z-index: 1000000;
   opacity: 1;
 }
 .preloader__row {
@@ -1137,6 +1137,7 @@ body {
   width: 40px;
   height: 30px;
   display: none;
+  transform: translate(120%, 0);
 }
 .burger-button-line {
   height: 5px;
@@ -2147,6 +2148,8 @@ body {
   }
   .header__logo svg {
     max-width: 76px;
+    transform: translate(-120%, 0);
+    opacity: 1;
   }
   .header .container {
     width: 100%;
@@ -2209,12 +2212,14 @@ body {
     margin-left: 15px;
     margin-bottom: 550px;
     z-index: 100;
+    transform: translate(-100%, 0);
   }
   .federation__percon {
     display: none;
   }
   .federation__percon-adapt {
     display: block;
+    transform: translate(-100%, 0);
   }
   .federation__fon {
     display: none;
@@ -2240,6 +2245,9 @@ body {
     margin: 0 15px;
     backdrop-filter: blur(20px);
     padding: 15px;
+  }
+  .federation__text-block-2 {
+    transform: translate(-100%, 0);
   }
   .federation__text-item {
     font-size: 31px;

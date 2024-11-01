@@ -247,11 +247,18 @@ document.addEventListener("DOMContentLoaded", function(){
     //Анимации
     function startAnimations() {
         gsap.registerPlugin(ScrollTrigger);
+        const mm = gsap.matchMedia();
         
         gsap.to(".header__logo svg", {
             opacity: 1,
             duration: 1,
             delay: 1,
+        });
+        mm.add("(max-width: 768px)", () => {
+            gsap.to(".header__logo svg", {
+                x: 0, 
+                duration: 1,
+            })
         });
     
         gsap.to('.header__menu', {
@@ -370,6 +377,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
 
+        const largeScreenTrigger =
         gsap.to('.federation__president', {
             opacity: 1,
             clipPath: 'inset(0)',
@@ -380,7 +388,23 @@ document.addEventListener("DOMContentLoaded", function(){
                 start: "90% bottom",
                 scrub: false,
             }
-        })
+        }).ScrollTrigger
+        mm.add("(max-width: 768px)", () => {
+            if (largeScreenTrigger) {
+                largeScreenTrigger.kill();
+            }
+            gsap.to(".federation__president", {
+                opacity: 1,
+                clipPath: 'inset(0)',
+                duration: 1,
+                delay: 1,
+                scrollTrigger: {
+                    trigger: '.federation__percon-adapt',
+                    start: "90% bottom",
+                    scrub: false,
+                }
+            })
+        });
 
         gsap.to('.event__content-text', {
             x:0,
@@ -590,7 +614,35 @@ document.addEventListener("DOMContentLoaded", function(){
                 scrub: false
             }
         })
+
+        gsap.to('.burger-button', {
+            x: 0,
+            duration: 1,
+        })
+
+        gsap.to('.federation__name-adapt', {
+            x: 0,
+            duration: 1,
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__percon-adapt',
+                start: "90% bottom",
+                scrub: false,
+            }
+        })
+
+        gsap.to('.federation__percon-adapt', {
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.federation__percon-adapt',
+                start: "90% bottom",
+                scrub: false,
+            }
+        })
+
     }
+    
     
 
 
