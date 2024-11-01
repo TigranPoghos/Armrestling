@@ -377,7 +377,6 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
 
-        const largeScreenTrigger =
         gsap.to('.federation__president', {
             opacity: 1,
             clipPath: 'inset(0)',
@@ -388,11 +387,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 start: "90% bottom",
                 scrub: false,
             }
-        }).ScrollTrigger
+        })
         mm.add("(max-width: 768px)", () => {
-            if (largeScreenTrigger) {
-                largeScreenTrigger.kill();
-            }
             gsap.to(".federation__president", {
                 opacity: 1,
                 clipPath: 'inset(0)',
@@ -426,6 +422,17 @@ document.addEventListener("DOMContentLoaded", function(){
                 scrub: false,
             }
         })
+        mm.add("(max-width: 768px)", () => {
+            gsap.to(".event__item", {
+                duration: 1,
+                clipPath: 'inset(-150px)',
+                scrollTrigger: {
+                    trigger: '.event__item-content',
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        });
 
         gsap.to('.event__item-content', {
             x:0,
@@ -536,6 +543,17 @@ document.addEventListener("DOMContentLoaded", function(){
                 scrub: false
             }
         })
+        mm.add("(max-width: 768px)", () => {
+            gsap.to('.partner__item-block', {
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.partner__item-block',
+                    start: '80% bottom',
+                    scrub: false
+                }
+            })
+        });
 
         document.querySelectorAll('.footer__contact-left a').forEach
         (contactLeft => {
