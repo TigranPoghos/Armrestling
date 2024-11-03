@@ -148,6 +148,7 @@ body {
 
     &__adapt {
         display: none;
+        transform: translateY(200%);
     }
 
     &__row {
@@ -230,11 +231,6 @@ body {
                 transform: translateX(100%);
             }
         }
-
-        &-middle {
-            clip-path: inset(50% 50% 50% 50%);
-            transition: clip-path 1s ease-out;
-        }
     }
 
     &__line {
@@ -313,8 +309,6 @@ body {
         right: -15px;
         position: absolute;
         z-index: 5;
-        opacity: 0;
-        transform: translateX(100%);
     }
 }
 
@@ -485,7 +479,7 @@ body {
             box-sizing: border-box;
             backdrop-filter: blur(70px);
             background: rgba(107, 4, 4, 0.4);
-            transform: translate(100%, 0);
+            transform: translate(110%, 0);
 
             &-1 {
                 max-width: 855px;
@@ -822,8 +816,7 @@ body {
         margin-top: 280px;
         margin-left: auto;
         margin-right: auto;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        overflow: hidden;
         margin-bottom: 303px;
 
         &::-webkit-scrollbar {
@@ -962,6 +955,7 @@ body {
         align-items: center;
         margin-bottom: 45px;
         z-index: 2;
+        transform: translateX(-110%);
 
         & span {
             font-weight: 900;
@@ -979,6 +973,7 @@ body {
     &__subtitle {
         max-width: 730px;
         margin-bottom: 155px;
+        transform: translateX(-110%);
 
         & span {
             font-weight: 500;
@@ -2717,9 +2712,6 @@ body {
 
     .arm {
         &__text {
-            top: 127px;
-            transform: translate(-50%, 0);
-
             & svg {
                 display: none;
             }

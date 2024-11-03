@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function(){
     if (marquee2) {
         marquee2.style.animationDuration = animationDuration2;
     }
-
-
     
   
     //переход по странице с кнопок меню
@@ -282,12 +280,6 @@ document.addEventListener("DOMContentLoaded", function(){
             duration: 1,
         });
 
-        gsap.to('.arm__line', {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-        });
-
         document.querySelectorAll('.gallery__title-line').forEach
         (titleLine => {
             gsap.to(titleLine, { 
@@ -547,6 +539,7 @@ document.addEventListener("DOMContentLoaded", function(){
             gsap.to('.partner__item-block', {
                 opacity: 1,
                 duration: 1,
+                delay: 0,
                 scrollTrigger: {
                     trigger: '.partner__item-block',
                     start: '80% bottom',
@@ -559,7 +552,7 @@ document.addEventListener("DOMContentLoaded", function(){
         (contactLeft => {
             gsap.to(contactLeft, {
                 x: 0,
-                delay: 2,
+                delay: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: '.footer__contact-middle',
@@ -573,7 +566,7 @@ document.addEventListener("DOMContentLoaded", function(){
         (contactRight => {
             gsap.to(contactRight, {
                 x: 0,
-                delay: 2,
+                delay: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: '.footer__contact-middle',
@@ -583,15 +576,15 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         })
 
-        gsap.to('.footer__contact-middle', {
+        gsap.from('.footer__contact-middle', {
+            scale: 0,
             duration: 1,
-            clipPath: 'inset(0 0 0 0)',
             scrollTrigger: {
                 trigger: '.footer__contact-middle',
                 start: '100% bottom',
                 scrub: false
             }
-        }) 
+        })
 
         gsap.to('.footer__title-text', {
             x: 0,
@@ -659,8 +652,194 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
 
+        gsap.to('.footer__adapt', {
+            y: 0,
+            duration: 1,
+        })
+
+        gsap.to('.Event__title', {
+            x: 0,
+            duration: 1,
+        })
+
+        gsap.to('.Event__subtitle', {
+            x: 0,
+            duration: 1,
+        })
+
+        gsap.from('.Event__year', {
+            x: '-110%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.Event__year',
+                start: '100% bottom',
+                scrub: false,
+            }
+        })
+
+        document.querySelectorAll('.Event__tournament').forEach
+        (tournament => {
+            gsap.from(tournament, {
+                x: '-110%',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: tournament,
+                    start: '100% bottom',
+                    scrub: false,
+                }
+            })
+        })
+
+        gsap.from('.Event__info', {
+            x: '-110%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.Event__info',
+                start: '100% bottom',
+                scrub: false,
+            }
+        })
+
+        gsap.from('.line-top', {
+            scaleY: 0,
+            duration: 0.5,
+            transformOrigin: 'bottom'
+        })
+
+        gsap.from('.line-bottom', {
+            scaleY: 0,
+            duration: 0.5,
+            delay: 0.5,
+        })
+
+        gsap.to("#mask-top rect", {
+            duration: 1,
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+          
+        gsap.to("#mask-bottom rect", {
+            duration: 1,
+            delay: 0, 
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+
+        gsap.to("#mask-top-1024 rect", {
+            duration: 1,
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+          
+        gsap.to("#mask-bottom-1024 rect", {
+            duration: 1,
+            delay: 0, 
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+
+        gsap.to("#mask-top-768 rect", {
+            duration: 1,
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+          
+        gsap.to("#mask-bottom-768 rect", {
+            duration: 1,
+            delay: 0, 
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+
+        gsap.to("#mask-top-1740 rect", {
+            duration: 1,
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+          
+        gsap.to("#mask-bottom-1740 rect", {
+            duration: 1,
+            delay: 0, 
+            attr: { width: '100%' },
+            delay: 1,
+            scrollTrigger: {
+                trigger: '.federation__fon',
+                scrub: false,
+                start: '90% bottom'
+            }
+        });
+
+        gsap.from('.faq__top-row', {
+            x: '-110%',
+            duration: 1,
+        })
+
+        document.querySelectorAll('.faq__bottom-item').forEach
+        (faqItem => {
+            gsap.from(faqItem, {
+                x: '-110%',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: faqItem,
+                    start: '100% bottom',
+                    scrub: false
+                }
+            })
+        })
+
+
+
+
+
+
+
     }
     
+
+
+    //партнеры
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+    });
+
+
+      
+      
     
 
 

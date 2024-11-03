@@ -427,7 +427,7 @@
                     <nav class="header__nav">
                         <ul class="header__menu-ul">
                             <li><a href="#" class="header__menu-item">Галерея</a></li>
-                            <li><button class="button__federation header__menu-item">О НАС</button></li>
+                            <li><button type="button" class="button__federation header__menu-item">О НАС</button></li>
                             <li><a href="event.html" class="button__event header__menu-item">Мероприятия</a></li>
                             <li><button class="button__partner header__menu-item">Партнёры</button></li>
                             <li><button class="button__contact header__menu-item">Контакты</button></li>
@@ -484,8 +484,8 @@
                 </div>
                 <div class="arm__line">
                     <svg width="152" height="344" viewBox="0 0 152 344" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect opacity="0.7" x="35.9946" y="203.685" width="55.8545" height="249.791" transform="rotate(-130.123 35.9946 203.685)" fill="#FF0000" />
-                        <rect y="160.806" width="56" height="238.872" transform="rotate(-40.1322 0 160.806)" fill="#FF0000" />
+                        <rect class="line-top" opacity="0.7" x="35.9946" y="203.685" width="55.8545" height="249.791" transform="rotate(-130.123 35.9946 203.685)" fill="#FF0000" />
+                        <rect class="line-bottom" y="160.806" width="56" height="238.872" transform="rotate(-40.1322 0 160.806)" fill="#FF0000" />
                     </svg>
                 </div>
             </div>
@@ -624,8 +624,14 @@
                     </div>
                     <div class="federation__line">
                         <svg width="2630" height="2950" viewBox="0 0 2630 2950" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M89.3631 2921.11L129.551 2706.52L2539.37 800.481L2620.04 903.036L89.3631 2921.11Z" fill="url(#paint0_linear_1_17)" />
-                            <rect width="130.435" height="1145.57" transform="matrix(-0.772814 0.634633 -0.638062 -0.769985 2616.23 901.879)" fill="url(#paint1_linear_1_17)" />
+                            <mask id="mask-top-1740">
+                              <rect x="0" y="0" width="0" height="100%" fill="#fff" />
+                            </mask>
+                            <path d="M89.3631 2921.11L129.551 2706.52L2539.37 800.481L2620.04 903.036L89.3631 2921.11Z" fill="url(#paint0_linear_1_17)" mask="url(#mask-top-1740)"/>
+                            <mask id="mask-bottom-1740">
+                              <rect x="0" y="0" width="0" height="100%" fill="#fff" />
+                            </mask>
+                            <rect width="130.435" height="1145.57" transform="matrix(-0.772814 0.634633 -0.638062 -0.769985 2616.23 901.879)" fill="url(#paint1_linear_1_17)" mask="url(#mask-bottom-1740)"/>
                             <defs>
                               <linearGradient id="paint0_linear_1_17" x1="522.979" y1="2414.27" x2="649.374" y2="2571.36" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#D00808" stop-opacity="0.97" />
@@ -636,28 +642,42 @@
                                 <stop offset="1" stop-color="#6A0404" />
                               </linearGradient>
                             </defs>
-                          </svg>
+                        </svg>
                     </div>
                     <div class="federation__line-1366">
-                        <svg width="2233" height="2368" viewBox="0 0 2233 2368" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2225.76 629.663C2226.11 630.088 2226.05 630.72 2225.63 631.073L2172.72 674.518C2172.29 674.869 2171.66 674.808 2171.31 674.382L1666.14 64.0087C1665.62 63.3818 1666.03 62.4338 1666.84 62.379L1744.04 57.1775C1744.36 57.156 1744.67 57.2881 1744.88 57.5331L2225.76 629.663Z" fill="url(#paint0_linear_34_369)" />
-                            <path d="M2177.92 578.604C2178.36 578.261 2178.99 578.338 2179.33 578.774L2221.37 632.805C2221.71 633.241 2221.63 633.871 2221.2 634.212L47.6427 2340.56C46.777 2341.23 45.6141 2340.22 46.1661 2339.26L130.792 2193.01C130.855 2192.9 130.939 2192.8 131.039 2192.72L2177.92 578.604Z" fill="url(#paint1_linear_34_369)" />
-                            <defs>
-                              <linearGradient id="paint0_linear_34_369" x1="1971.47" y1="339.335" x2="1984.44" y2="327.737" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#D00808" stop-opacity="0.97" />
-                                <stop offset="1" stop-color="#6A0404" />
-                              </linearGradient>
-                              <linearGradient id="paint1_linear_34_369" x1="1125.91" y1="1418.2" x2="1115" y2="1404.63" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#D00808" stop-opacity="0.97" />
-                                <stop offset="1" stop-color="#6A0404" />
-                              </linearGradient>
-                            </defs>
-                          </svg>
+                      <svg width="2233" height="2368" viewBox="0 0 2233 2368" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask-top">
+                          <rect x="0" y="0" width="0" height="100%" fill="#fff" />
+                        </mask>
+                        <path class="fed__line-top" d="M2225.76 629.663C2226.11 630.088 2226.05 630.72 2225.63 631.073L2172.72 674.518C2172.29 674.869 2171.66 674.808 2171.31 674.382L1666.14 64.0087C1665.62 63.3818 1666.03 62.4338 1666.84 62.379L1744.04 57.1775C1744.36 57.156 1744.67 57.2881 1744.88 57.5331L2225.76 629.663Z"
+                              fill="url(#paint0_linear_34_369)" mask="url(#mask-top)" />
+                        <mask id="mask-bottom">
+                          <rect x="0" y="0" width="0" height="100%" fill="#fff" />
+                        </mask>               
+                        <path class="fed__line-bottom" d="M2177.92 578.604C2178.36 578.261 2178.99 578.338 2179.33 578.774L2221.37 632.805C2221.71 633.241 2221.63 633.871 2221.2 634.212L47.6427 2340.56C46.777 2341.23 45.6141 2340.22 46.1661 2339.26L130.792 2193.01C130.855 2192.9 130.939 2192.8 131.039 2192.72L2177.92 578.604Z"
+                              fill="url(#paint1_linear_34_369)" mask="url(#mask-bottom)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_34_369" x1="1971.47" y1="339.335" x2="1984.44" y2="327.737" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D00808" stop-opacity="0.97" />
+                            <stop offset="1" stop-color="#6A0404" />
+                          </linearGradient>
+                          <linearGradient id="paint1_linear_34_369" x1="1125.91" y1="1418.2" x2="1115" y2="1404.63" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D00808" stop-opacity="0.97" />
+                            <stop offset="1" stop-color="#6A0404" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
                     <div class="federation__line-1024">
                         <svg width="1683" height="1782" viewBox="0 0 1683 1782" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1677.62 472.113C1677.89 472.431 1677.85 472.906 1677.53 473.17L1637.87 505.738C1637.55 506.001 1637.07 505.955 1636.81 505.636L1258.11 48.0795C1257.72 47.6095 1258.03 46.8989 1258.64 46.8578L1316.51 42.9586C1316.75 42.9424 1316.98 43.0415 1317.14 43.2251L1677.62 472.113Z" fill="url(#paint0_linear_40_432)" />
-                            <path d="M1641.77 433.838C1642.09 433.581 1642.56 433.638 1642.82 433.966L1674.34 474.469C1674.59 474.796 1674.53 475.268 1674.21 475.524L35.7302 1761.81C35.0806 1762.32 34.2084 1761.55 34.624 1760.84L98.5782 1650.8C98.6258 1650.71 98.6883 1650.64 98.7625 1650.58L1641.77 433.838Z" fill="url(#paint1_linear_40_432)" />
+                            <mask id="mask-top-1024">
+                              <rect x="0" y="0" width="0" height="100%" fill="#fff">
+                            </mask>
+                            <path class="fed__line-top" d="M1677.62 472.113C1677.89 472.431 1677.85 472.906 1677.53 473.17L1637.87 505.738C1637.55 506.001 1637.07 505.955 1636.81 505.636L1258.11 48.0795C1257.72 47.6095 1258.03 46.8989 1258.64 46.8578L1316.51 42.9586C1316.75 42.9424 1316.98 43.0415 1317.14 43.2251L1677.62 472.113Z" fill="url(#paint0_linear_40_432)" mask="url(#mask-top-1024)"/>
+                            <mask id="mask-bottom-1024">
+                              <rect x="0" y="0" width="0" height="100%" fill="#fff">
+                            </mask>
+                            <path class="fed__line-bottom" d="M1641.77 433.838C1642.09 433.581 1642.56 433.638 1642.82 433.966L1674.34 474.469C1674.59 474.796 1674.53 475.268 1674.21 475.524L35.7302 1761.81C35.0806 1762.32 34.2084 1761.55 34.624 1760.84L98.5782 1650.8C98.6258 1650.71 98.6883 1650.64 98.7625 1650.58L1641.77 433.838Z" fill="url(#paint1_linear_40_432)" mask="url(#mask-bottom-1024)"/>
                             <defs>
                               <linearGradient id="paint0_linear_40_432" x1="1487" y1="254.473" x2="1496.72" y2="245.779" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#D00808" stop-opacity="0.97" />
@@ -672,8 +692,14 @@
                     </div>
                     <div class="federation__line-768">
                       <svg width="1425" height="1467" viewBox="0 0 1425 1467" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1420.24 356.403C1420.44 356.642 1420.4 356.998 1420.16 357.196L1390.42 381.622C1390.18 381.819 1389.82 381.785 1389.63 381.545L1105.6 38.3779C1105.31 38.0255 1105.54 37.4925 1106 37.4617L1149.4 34.5373C1149.58 34.5252 1149.76 34.5995 1149.87 34.7372L1420.24 356.403Z" fill="url(#paint0_linear_51_440)" />
-                        <path d="M1393.34 327.697C1393.59 327.504 1393.94 327.547 1394.13 327.792L1417.77 358.17C1417.96 358.415 1417.92 358.769 1417.67 358.961L28.0385 1449.94C27.5412 1450.33 26.8808 1449.72 27.2207 1449.19L84.2935 1359.51C84.3275 1359.45 84.3703 1359.41 84.42 1359.37L1393.34 327.697Z" fill="url(#paint1_linear_51_440)" />
+                        <mask id="mask-top-768">
+                          <rect x="0" y="0" width="0" height="100%" fill="#fff">
+                        </mask>
+                        <path d="M1420.24 356.403C1420.44 356.642 1420.4 356.998 1420.16 357.196L1390.42 381.622C1390.18 381.819 1389.82 381.785 1389.63 381.545L1105.6 38.3779C1105.31 38.0255 1105.54 37.4925 1106 37.4617L1149.4 34.5373C1149.58 34.5252 1149.76 34.5995 1149.87 34.7372L1420.24 356.403Z" fill="url(#paint0_linear_51_440)" mask="url(#mask-top-768)"/>
+                        <mask id="mask-bottom-768">
+                          <rect x="0" y="0" width="0" height="100%" fill="#fff">
+                        </mask>
+                        <path d="M1393.34 327.697C1393.59 327.504 1393.94 327.547 1394.13 327.792L1417.77 358.17C1417.96 358.415 1417.92 358.769 1417.67 358.961L28.0385 1449.94C27.5412 1450.33 26.8808 1449.72 27.2207 1449.19L84.2935 1359.51C84.3275 1359.45 84.3703 1359.41 84.42 1359.37L1393.34 327.697Z" fill="url(#paint1_linear_51_440)" mask="url(#mask-bottom-768)"/>
                         <defs>
                           <linearGradient id="paint0_linear_51_440" x1="1277.27" y1="193.173" x2="1284.56" y2="186.653" gradientUnits="userSpaceOnUse">
                             <stop stop-color="#D00808" stop-opacity="0.97" />
@@ -1050,23 +1076,27 @@
                                 </defs>
                               </svg>
                         </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-kpd.png" alt="">
-                        </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-med.png" alt="">
-                        </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-it.png" alt="">
-                        </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-kpd.png" alt="">
-                        </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-med.png" alt="">
-                        </div>
-                        <div class="partner__item-block">
-                            <img src="image/partner-it.png" alt="">
+                        <div class="swiper mySwiper">
+                          <div class="swiper-wrapper">
+                            <div class="partner__item-block swiper-slide">
+                              <img src="image/partner-kpd.png" alt="">
+                            </div>
+                            <div class="partner__item-block swiper-slide">
+                                <img src="image/partner-med.png" alt="">
+                            </div>
+                            <div class="partner__item-block swiper-slide">
+                                <img src="image/partner-it.png" alt="">
+                            </div>
+                            <div class="partner__item-block swiper-slide">
+                                <img src="image/partner-kpd.png" alt="">
+                            </div>
+                            <div class="partner__item-block swiper-slide">
+                                <img src="image/partner-med.png" alt="">
+                            </div>
+                            <div class="partner__item-block swiper-slide">
+                                <img src="image/partner-it.png" alt="">
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
