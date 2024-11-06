@@ -312,6 +312,12 @@ body {
     }
 }
 
+@supports (background-image: url("../image/arm__fon.webp")) {
+    .arm__fon {
+        background: linear-gradient(180deg, rgba(29, 29, 29, 0.3) 0%, #1d1d1d 100%), linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(116deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), linear-gradient(245deg, rgba(29, 29, 29, 0) 0%, #1d1d1d 100%), url("../image/arm__fon.webp");
+    }
+}
+
 .gallery {
     margin-bottom: 200px;
     z-index: 5;
@@ -794,6 +800,12 @@ body {
                 line-height: 1;
             }
         }
+    }
+}
+
+@supports (background-image: url("../image/event.webp")) {
+    .event__item {
+        background-image: url("../image/event.webp");
     }
 }
 
