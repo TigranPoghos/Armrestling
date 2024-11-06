@@ -274,24 +274,29 @@ document.addEventListener("DOMContentLoaded", function(){
             duration: 1,
         });
 
-        gsap.to('.arm__text', {
-            opacity: 1,
-            clipPath: 'inset(0)',
-            duration: 1,
-        });
+        const armText = document.querySelector('.arm__text');
+        if (armText) {
+            gsap.to(armText, {
+                opacity: 1,
+                clipPath: 'inset(0)',
+                duration: 1,
+            });
+        }
 
         document.querySelectorAll('.gallery__title-line').forEach
         (titleLine => {
-            gsap.to(titleLine, { 
-                width: '100%',
-                duration: 1,
-                delay: 1,
-                scrollTrigger: {
-                    trigger: titleLine,
-                    start: "100% bottom",
-                    scrub: false,
-                }
-            })
+            if (titleLine) {
+                gsap.to(titleLine, { 
+                    width: '100%',
+                    duration: 1,
+                    delay: 1,
+                    scrollTrigger: {
+                        trigger: titleLine,
+                        start: "100% bottom",
+                        scrub: false,
+                    }
+                })
+            }
         })
 
         document.querySelectorAll('.gallery__title').forEach
@@ -310,270 +315,361 @@ document.addEventListener("DOMContentLoaded", function(){
 
         document.querySelectorAll('.TitleSvg').forEach
         (titlesvg => {
-            gsap.to(titlesvg, {
-                opacity: 1,
-                rotateY: '180deg',
-                duration: 1,
-                delay: 0.5,
-                scrollTrigger: {
-                    trigger: titlesvg,
-                    start: "100% bottom",
-                    scrub: false,
-                }
-            })
+            if (titlesvg) {
+                gsap.to(titlesvg, {
+                    opacity: 1,
+                    rotateY: '180deg',
+                    duration: 1,
+                    delay: 0.5,
+                    scrollTrigger: {
+                        trigger: titlesvg,
+                        start: "100% bottom",
+                        scrub: false,
+                    }
+                })
+            }
         })
 
         document.querySelectorAll('.federation__text-block').forEach
         (text__block => {
-            gsap.to(text__block, {
-                x:0,
+            if (text__block) {
+                gsap.to(text__block, {
+                    x:0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: text__block,
+                        start: "100% bottom",
+                        scrub: false,
+                    }
+                })
+            }
+        })
+
+        const federationFon = document.querySelector('.federation__fon')
+        if (federationFon) {
+            gsap.to(federationFon, {
+                x: 0,
                 duration: 1,
                 scrollTrigger: {
-                    trigger: text__block,
-                    start: "100% bottom",
+                    trigger: federationFon,
+                    start: "80% bottom",
                     scrub: false,
                 }
             })
-        })
+        }
 
-        gsap.to('.federation__fon', {
-            x: 0,
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
+        const federationPercon = document.querySelector('.federation__percon')
+        if (federationPercon) {
+            gsap.to(federationPercon, {
+                opacity: 1,
+                duration: 1,
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    start: "80% bottom",
+                    scrub: false,
+                }
+            })
+        }
 
-        gsap.to('.federation__percon', {
-            opacity: 1,
-            duration: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.federation__name', {
-            opacity: 1,
-            clipPath: 'inset(0)',
-            duration: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.federation__president', {
-            opacity: 1,
-            clipPath: 'inset(0)',
-            duration: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
-        mm.add("(max-width: 768px)", () => {
-            gsap.to(".federation__president", {
+        const federationName = document.querySelector('.federation__name')
+        if (federationName) {
+            gsap.to(federationName, {
                 opacity: 1,
                 clipPath: 'inset(0)',
                 duration: 1,
                 delay: 1,
                 scrollTrigger: {
-                    trigger: '.federation__percon-adapt',
-                    start: "90% bottom",
+                    trigger: federationFon,
+                    start: "80% bottom",
                     scrub: false,
                 }
             })
-        });
+        }
 
-        gsap.to('.event__content-text', {
-            x:0,
-            duration:1,
-            scrollTrigger: {
-                trigger: '.event__content-text',
-                start: "100% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__item', {
-            duration: 1,
-            clipPath: 'inset(-150px)',
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-        mm.add("(max-width: 768px)", () => {
-            gsap.to(".event__item", {
+        const federationPresident = document.querySelector('.federation__president')
+        if (federationPresident) {
+            gsap.to('.federation__president', {
+                opacity: 1,
+                clipPath: 'inset(0)',
                 duration: 1,
-                clipPath: 'inset(-150px)',
+                delay: 1,
                 scrollTrigger: {
-                    trigger: '.event__item-content',
+                    trigger: federationFon,
+                    start: "80% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const federationPerconAdapt = document.querySelector('.federation__percon-adapt')
+        if (federationPerconAdapt) {
+            gsap.to(federationPerconAdapt, {
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: federationPerconAdapt,
+                    start: "80% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const federationNameAdapt = document.querySelector('.federation__name-adapt')
+        if (federationNameAdapt) {
+            gsap.to(federationNameAdapt, {
+                x: 0,
+                duration: 1,
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationPerconAdapt,
+                    start: "80% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        mm.add("(max-width: 768px)", () => {
+            if (federationPresident) {
+                gsap.to('.federation__president', {
+                    opacity: 1,
+                    clipPath: 'inset(0)',
+                    duration: 1,
+                    delay: 1,
+                    scrollTrigger: {
+                        trigger: federationPerconAdapt,
+                        start: "80% bottom",
+                        scrub: false,
+                    }
+                })
+            }
+        });
+        
+        const eventContentText = document.querySelector('.event__content-text')
+        if (eventContentText) {
+            gsap.to(eventContentText, {
+                x:0,
+                duration:1,
+                scrollTrigger: {
+                    trigger: eventContentText,
+                    start: "100% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const EventItemContent = document.querySelector('.event__item-content') 
+        if (EventItemContent) {
+            gsap.to(EventItemContent, {
+                x:0,
+                duration: 1,
+                delay: 2,
+                scrollTrigger: {
+                    trigger: EventItemContent,
                     start: "50% bottom",
                     scrub: false,
                 }
             })
+        }
+
+        const EventItem = document.querySelector('.event__item')
+        if (EventItem) {
+            gsap.to(EventItem, {
+                duration: 1,
+                clipPath: 'inset(-150px)',
+                delay: 1,
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        mm.add("(max-width: 768px)", () => {
+            if (EventItem) {
+                gsap.to(EventItem, {
+                    duration: 1,
+                    clipPath: 'inset(-150px)',
+                    scrollTrigger: {
+                        trigger: EventItemContent,
+                        start: "50% bottom",
+                        scrub: false,
+                    }
+                })
+            }
         });
 
-        gsap.to('.event__item-content', {
-            x:0,
-            duration: 1,
-            delay: 2,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__minotavr', {
-            duration: 1,
-            clipPath: 'inset(0 0 0 0)',
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__fon', {
-            duration: 1,
-            clipPath: 'inset(0 0 0 0)',
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__fon-1366', {
-            duration: 1,
-            clipPath: 'inset(0 0 0 0)',
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__fon-1024', {
-            duration: 1,
-            clipPath: 'inset(0 0 0 0)',
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.event__fon-768', {
-            duration: 1,
-            clipPath: 'inset(0 0 0 0)',
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.event__item-content',
-                start: "50% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.partner__fon-1', {
-            duration: 1, 
-            x: 0,
-            opacity: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.partner__item-block',
-                start: '150% bottom',
-                scrub: false,
-            }
-        })
-
-        gsap.to('.partner__fon-3', {
-            duration: 1, 
-            clipPath: 'inset(0 0 0 0)',
-            scrollTrigger: {
-                trigger: '.partner__item-block',
-                start: '150% bottom',
-                scrub: false,
-            }
-        })
-
-        gsap.to('.partner__fon-2', {
-            duration: 1, 
-            x: 0,
-            opacity: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.partner__item-block',
-                start: '150% bottom',
-                scrub: false
-            }
-        })
-
-        gsap.to('.partner__item-block', {
-            opacity: 1,
-            duration: 1,
-            delay: 2,
-            scrollTrigger: {
-                trigger: '.partner__item-block',
-                start: '150% bottom',
-                scrub: false
-            }
-        })
-        mm.add("(max-width: 768px)", () => {
-            gsap.to('.partner__item-block', {
-                opacity: 1,
+        const EventMinotavr = document.querySelector('.event__minotavr') 
+        if (EventMinotavr) {
+            gsap.to(EventMinotavr, {
                 duration: 1,
-                delay: 0,
+                clipPath: 'inset(0 0 0 0)',
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const EventFon = document.querySelector('.event__fon')
+        if (EventFon) {
+            gsap.to(EventFon, {
+                duration: 1,
+                clipPath: 'inset(0 0 0 0)',
+                delay: 1,
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const EventFon1366 = document.querySelector('.event__fon-1366')
+        if (EventFon1366) {
+            gsap.to(EventFon1366, {
+                duration: 1,
+                clipPath: 'inset(0 0 0 0)',
+                delay: 1,
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const EventFon1024 = document.querySelector('.event__fon-1024')
+        if (EventFon1024) {
+            gsap.to(EventFon1024, {
+                duration: 1,
+                clipPath: 'inset(0 0 0 0)',
+                delay: 1,
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const EventFon768 = document.querySelector('.event__fon-768')
+        if (EventFon768) {
+            gsap.to(EventFon768, {
+                duration: 1,
+                clipPath: 'inset(0 0 0 0)',
+                delay: 1,
+                scrollTrigger: {
+                    trigger: EventItemContent,
+                    start: "50% bottom",
+                    scrub: false,
+                }
+            })
+        }
+
+        const PartnerFon1 = document.querySelector('.partner__fon-1')
+        if (PartnerFon1) {
+            gsap.to(PartnerFon1, {
+                duration: 1, 
+                x: 0,
+                opacity: 1,
+                delay: 1,
                 scrollTrigger: {
                     trigger: '.partner__item-block',
-                    start: '80% bottom',
+                    start: '110% bottom',
+                    scrub: false,
+                }
+            })
+        }
+
+        const PartnerFon3 = document.querySelector('.partner__fon-3')
+        if (PartnerFon3) {
+            gsap.to(PartnerFon3, {
+                duration: 1, 
+                clipPath: 'inset(0 0 0 0)',
+                scrollTrigger: {
+                    trigger: '.partner__item-block',
+                    start: '110% bottom',
+                    scrub: false,
+                }
+            })
+        }
+
+        const PartnerFon2 = document.querySelector('.partner__fon-2')
+        if (PartnerFon2) {
+            gsap.to(PartnerFon2, {
+                duration: 1, 
+                x: 0,
+                opacity: 1,
+                delay: 1,
+                scrollTrigger: {
+                    trigger: '.partner__item-block',
+                    start: '110% bottom',
                     scrub: false
                 }
             })
+        }
+
+        const PartnerItemBlock = document.querySelector('.partner__item-block')
+        if (PartnerItemBlock) {
+            gsap.to('.partner__item-block', {
+                opacity: 1,
+                duration: 1,
+                delay: 2,
+                scrollTrigger: {
+                    trigger: PartnerItemBlock,
+                    start: '110% bottom',
+                    scrub: false
+                }
+            })
+        }
+        mm.add("(max-width: 768px)", () => {
+            if (PartnerItemBlock) {
+                gsap.to('.partner__item-block', {
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0,
+                    scrollTrigger: {
+                        trigger: PartnerItemBlock,
+                        start: '80% bottom',
+                        scrub: false
+                    }
+                })
+            }
         });
 
         document.querySelectorAll('.footer__contact-left a').forEach
         (contactLeft => {
-            gsap.to(contactLeft, {
-                x: 0,
-                delay: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.footer__contact-middle',
-                    start: '100% bottom',
-                    scrub: false
-                }
-            })
+            if (contactLeft) {
+                gsap.to(contactLeft, {
+                    x: 0,
+                    delay: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: '.footer__contact-middle',
+                        start: '100% bottom',
+                        scrub: false
+                    }
+                })
+            }
         }) 
 
         document.querySelectorAll('.footer__contact-right a').forEach
         (contactRight => {
-            gsap.to(contactRight, {
-                x: 0,
-                delay: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.footer__contact-middle',
-                    start: '100% bottom',
-                    scrub: false
-                }
-            })
+            if (contactRight) {
+                gsap.to(contactRight, {
+                    x: 0,
+                    delay: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: '.footer__contact-middle',
+                        start: '100% bottom',
+                        scrub: false
+                    }
+                })
+            }
         })
 
         gsap.from('.footer__contact-middle', {
@@ -631,195 +727,229 @@ document.addEventListener("DOMContentLoaded", function(){
             duration: 1,
         })
 
-        gsap.to('.federation__name-adapt', {
-            x: 0,
-            duration: 1,
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__percon-adapt',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
-
-        gsap.to('.federation__percon-adapt', {
-            x: 0,
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.federation__percon-adapt',
-                start: "90% bottom",
-                scrub: false,
-            }
-        })
-
         gsap.to('.footer__adapt', {
             y: 0,
             duration: 1,
         })
 
-        gsap.to('.Event__title', {
-            x: 0,
-            duration: 1,
-        })
+        const EventTitle = document.querySelector('.Event__title')
+        if (EventTitle) {
+            gsap.to(EventTitle, {
+                x: 0,
+                duration: 1,
+            })
+        }
 
-        gsap.to('.Event__subtitle', {
-            x: 0,
-            duration: 1,
-        })
+        const EventSubtitle = document.querySelector('.Event__subtitle')
+        if (EventSubtitle) {
+            gsap.to(EventSubtitle, {
+                x: 0,
+                duration: 1,
+            })
+        }
 
-        gsap.from('.Event__year', {
-            x: '-110%',
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.Event__year',
-                start: '100% bottom',
-                scrub: false,
-            }
-        })
-
-        document.querySelectorAll('.Event__tournament').forEach
-        (tournament => {
-            gsap.from(tournament, {
+        const EventYear = document.querySelector('.Event__year')
+        if (EventYear) {
+            gsap.from(EventYear, {
                 x: '-110%',
                 duration: 1,
                 scrollTrigger: {
-                    trigger: tournament,
+                    trigger: EventYear,
                     start: '100% bottom',
                     scrub: false,
                 }
             })
-        })
+        }
 
-        gsap.from('.Event__info', {
-            x: '-110%',
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.Event__info',
-                start: '100% bottom',
-                scrub: false,
+        document.querySelectorAll('.Event__tournament').forEach
+        (tournament => {
+            if (tournament) {
+                gsap.from(tournament, {
+                    x: '-110%',
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: tournament,
+                        start: '100% bottom',
+                        scrub: false,
+                    }
+                })
             }
         })
 
-        gsap.from('.line-top', {
-            scaleY: 0,
-            duration: 0.5,
-            transformOrigin: 'bottom'
-        })
-
-        gsap.from('.line-bottom', {
-            scaleY: 0,
-            duration: 0.5,
-            delay: 0.5,
-        })
-
-        gsap.to("#mask-top rect", {
-            duration: 1,
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-          
-        gsap.to("#mask-bottom rect", {
-            duration: 1,
-            delay: 0, 
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-
-        gsap.to("#mask-top-1024 rect", {
-            duration: 1,
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-          
-        gsap.to("#mask-bottom-1024 rect", {
-            duration: 1,
-            delay: 0, 
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-
-        gsap.to("#mask-top-768 rect", {
-            duration: 1,
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-          
-        gsap.to("#mask-bottom-768 rect", {
-            duration: 1,
-            delay: 0, 
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-
-        gsap.to("#mask-top-1740 rect", {
-            duration: 1,
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-          
-        gsap.to("#mask-bottom-1740 rect", {
-            duration: 1,
-            delay: 0, 
-            attr: { width: '100%' },
-            delay: 1,
-            scrollTrigger: {
-                trigger: '.federation__fon',
-                scrub: false,
-                start: '90% bottom'
-            }
-        });
-
-        gsap.from('.faq__top-row', {
-            x: '-110%',
-            duration: 1,
-        })
-
-        document.querySelectorAll('.faq__bottom-item').forEach
-        (faqItem => {
-            gsap.from(faqItem, {
+        const EventInfo = document.querySelector('.Event__info')
+        if (EventInfo) {
+            gsap.from(EventInfo, {
                 x: '-110%',
                 duration: 1,
                 scrollTrigger: {
-                    trigger: faqItem,
+                    trigger: EventInfo,
                     start: '100% bottom',
-                    scrub: false
+                    scrub: false,
                 }
             })
+        }
+
+        document.querySelectorAll('.line-top').forEach
+        (lineTop => {
+            gsap.from(lineTop, {
+                scaleY: 0,
+                duration: 0.5,
+                transformOrigin: 'bottom',
+                scrollTrigger: {
+                    trigger: lineTop,
+                    scrub: false,
+                    start: '100% bottom'
+                }
+            })
+        })
+
+        document.querySelectorAll('.line-bottom').forEach
+        (lineBottom => {
+            gsap.from(lineBottom, {
+                scaleY: 0,
+                duration: 0.5,
+                delay: 0.5,
+                scrollTrigger: {
+                    trigger: lineBottom,
+                    scrub: false,
+                    start: '100% bottom'
+                }
+            })
+        })
+
+        const MaskTop = document.querySelector('#mask-top rect')
+        if (MaskTop) {
+            gsap.to(MaskTop, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+          
+        const MaskBottom = document.querySelector('#mask-bottom rect')
+        if (MaskBottom) {
+            gsap.to(MaskBottom, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+
+        const MaskTop1024 = document.querySelector('#mask-top-1024 rect')
+        if (MaskTop1024) {
+            gsap.to(MaskTop1024, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+          
+        const MaskBottom1024 = document.querySelector('#mask-bottom-1024 rect')
+        if (MaskBottom1024) {
+            gsap.to(MaskBottom1024, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+
+        const MaskTop768 = document.querySelector('#mask-top-768 rect')
+        if (MaskTop768) {
+            gsap.to(MaskTop768, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+          
+        const MaskBottom768 = document.querySelector('#mask-bottom-768 rect')
+        if (MaskBottom768) {
+            gsap.to(MaskBottom768, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+
+        const MaskTop1740 = document.querySelector('#mask-top-1740 rect')
+        if (MaskTop1740) {
+            gsap.to(MaskTop1740, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+          
+        const MaskBottom1740 = document.querySelector('#mask-bottom-1740 rect')
+        if (MaskBottom1740) {
+            gsap.to(MaskBottom1740, {
+                duration: 1,
+                attr: { width: '100%' },
+                delay: 1,
+                scrollTrigger: {
+                    trigger: federationFon,
+                    scrub: false,
+                    start: '90% bottom'
+                }
+            });
+        }
+
+        const FaqTopRow = document.querySelector('.faq__top-row')
+        if (FaqTopRow) {
+            gsap.from(FaqTopRow, {
+                x: '-110%',
+                duration: 1,
+            })
+        }
+
+        document.querySelectorAll('.faq__bottom-item').forEach
+        (faqItem => {
+            if (faqItem) {
+                gsap.from(faqItem, {
+                    x: '-110%',
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: faqItem,
+                        start: '100% bottom',
+                        scrub: false
+                    }
+                })
+            }
         })
 
 
@@ -833,9 +963,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     //партнеры
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-    });
+    if (document.querySelector(".mySwiper")) {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+        });
+    }
+    
 
 
       
