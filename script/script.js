@@ -790,8 +790,6 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         }
 
-
-
         document.querySelectorAll('.line-top').forEach
         (lineTop => {
             gsap.to(lineTop, {
@@ -955,8 +953,20 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
 
-
-
+        document.querySelectorAll('.gallery__item-block').forEach
+        (galleryBlock => {
+            if (galleryBlock) {
+                gsap.to (galleryBlock, {
+                    x: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: galleryBlock,
+                        start: '100% bottom',
+                        scrub: false,
+                    }
+                })
+            }
+        })
 
 
 

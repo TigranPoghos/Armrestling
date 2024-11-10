@@ -1356,6 +1356,11 @@ body {
             &:nth-child(odd) {
                 margin-right: 50px;
                 margin-bottom: 50px;
+                transform: translateX(-100vw);
+            }
+
+            &:nth-child(even) {
+                transform: translateX(100vw);
             }
         }
     }

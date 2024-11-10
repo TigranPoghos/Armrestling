@@ -1190,6 +1190,10 @@ body {
 .gallery__item-block:nth-child(odd) {
   margin-right: 50px;
   margin-bottom: 50px;
+  transform: translateX(-100vw);
+}
+.gallery__item-block:nth-child(even) {
+  transform: translateX(100vw);
 }
 .gallery__bottom .faq__bottom-row {
   gap: 0;
