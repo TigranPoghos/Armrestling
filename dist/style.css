@@ -188,6 +188,9 @@ body {
   max-width: max-content;
   overflow: hidden;
 }
+.footer__contact-middle {
+  scale: 0;
+}
 .footer__contact-left {
   justify-content: center;
   display: flex;

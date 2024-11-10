@@ -204,6 +204,10 @@ body {
         max-width: max-content;
         overflow: hidden;
 
+        &-middle {
+            scale: 0;
+        }
+
         &-left {
             justify-content: center;
             display: flex;

@@ -672,8 +672,8 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
 
-        gsap.from('.footer__contact-middle', {
-            scale: 0,
+        gsap.to('.footer__contact-middle', {
+            scale: 1,
             duration: 1,
             scrollTrigger: {
                 trigger: '.footer__contact-middle',
@@ -789,10 +789,13 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         }
 
+        gsap.set('.line-top', { scaleY: 0, transformOrigin: 'bottom' });
+        gsap.set('.line-bottom', { scaleY: 0});
+
         document.querySelectorAll('.line-top').forEach
         (lineTop => {
-            gsap.from(lineTop, {
-                scaleY: 0,
+            gsap.to(lineTop, {
+                scaleY: 1,
                 duration: 0.5,
                 transformOrigin: 'bottom',
                 scrollTrigger: {
@@ -805,8 +808,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
         document.querySelectorAll('.line-bottom').forEach
         (lineBottom => {
-            gsap.from(lineBottom, {
-                scaleY: 0,
+            gsap.to(lineBottom, {
+                scaleY: 1,
                 duration: 0.5,
                 delay: 0.5,
                 scrollTrigger: {
