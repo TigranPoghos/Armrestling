@@ -247,13 +247,13 @@ document.addEventListener("DOMContentLoaded", function(){
         gsap.registerPlugin(ScrollTrigger);
         const mm = gsap.matchMedia();
         
-        gsap.to(".header__logo svg", {
+        gsap.to(".header__logo img", {
             opacity: 1,
             duration: 1,
             delay: 1,
         });
         mm.add("(max-width: 768px)", () => {
-            gsap.to(".header__logo svg", {
+            gsap.to(".header__logo img", {
                 x: 0, 
                 duration: 1,
             })

@@ -127,7 +127,7 @@ body {
   transform: translateX(-50%);
   bottom: 0;
 }
-.header__logo svg {
+.header__logo img {
   opacity: 0;
 }
 
@@ -837,7 +837,7 @@ body {
   width: 0;
   height: 100%;
   background-color: #f00;
-  animation: load 3s 1s;
+  animation: load 3s linear 1s;
 }
 .preloader.hidden {
   display: none;
@@ -1165,8 +1165,35 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.gallery__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery__item-block {
+  max-width: 630px;
+  min-height: 502px;
+  background: #d9d9d9;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 900;
+  font-size: 130px;
+  color: #A80000;
+  font-family: "Zen Kaku Gothic New";
+}
+.gallery__item-block:nth-child(odd) {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.gallery__bottom .faq__bottom-row {
+  gap: 0;
+}
+
 @media (max-width: 1740px) {
-  .header__logo svg {
+  .header__logo img {
     max-width: 52px;
     height: auto;
   }
@@ -1478,6 +1505,13 @@ body {
     max-width: 1000px;
   }
 }
+@media (max-width: 1512px) {
+  .gallery__item-block {
+    max-width: 494px;
+    min-height: 394px;
+    font-size: 80px;
+  }
+}
 @media (max-width: 1366px) {
   .container {
     padding: 0 75px;
@@ -1764,6 +1798,13 @@ body {
     max-width: 700px;
   }
 }
+@media (max-width: 1200px) {
+  .gallery__item-block {
+    max-width: 370px;
+    min-height: 295px;
+    font-size: 70px;
+  }
+}
 @media (max-width: 1024px) {
   .footer__title {
     margin-top: 45px;
@@ -1824,7 +1865,7 @@ body {
     font-size: 10px;
     line-height: 1;
   }
-  .header__logo svg {
+  .header__logo img {
     max-width: 35px;
   }
   .header__nav {
@@ -2131,6 +2172,13 @@ body {
     max-width: 550px;
   }
 }
+@media (max-width: 892px) {
+  .gallery__item-block {
+    max-width: 273px;
+    min-height: 218px;
+    font-size: 60px;
+  }
+}
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -2152,7 +2200,7 @@ body {
   .header__menu-item:hover {
     color: #fff;
   }
-  .header__logo svg {
+  .header__logo img {
     max-width: 76px;
     transform: translate(-120%, 0);
     opacity: 1;
@@ -2386,6 +2434,16 @@ body {
   .faq__top-title svg {
     display: none;
   }
+  .gallery__item-block {
+    max-width: 450px;
+    min-height: 300px;
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  .gallery__item-block:nth-child(odd) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
 @media (max-width: 690px) {
   .event__item {
@@ -2396,7 +2454,7 @@ body {
   .container {
     padding: 0 10px;
   }
-  .header__logo svg {
+  .header__logo img {
     max-width: 51px;
   }
   .arm__text {
@@ -2579,6 +2637,11 @@ body {
   .faq__bottom-row {
     margin-top: 25px;
     margin-bottom: 50px;
+  }
+  .gallery__item-block {
+    max-width: 300px;
+    min-height: 200px;
+    font-size: 50px;
   }
 }
 @media (max-width: 516px) {
