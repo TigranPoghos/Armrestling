@@ -827,7 +827,6 @@ body {
 
     &__item {
         display: flex;
-        gap: 60px;
         max-width: 975px;
         margin-top: 280px;
         margin-left: auto;
@@ -840,7 +839,7 @@ body {
           }
 
         &-block {
-            opacity: 0;
+            width: auto !important;
 
             & img {
                 border-radius: 20px;
@@ -2052,7 +2051,7 @@ body {
 
         &__item {
             margin-top: 130px;
-            gap: 39px;
+
             max-width: 630px;
             margin-bottom: 156px;
 
@@ -2558,7 +2557,6 @@ body {
 
         &__item {
             margin-top: 130px;
-            gap: 29px;
             max-width: 472px;
             margin-bottom: 126px;
 
@@ -3259,7 +3257,6 @@ body {
         &__item {
             margin-bottom: 25px;
             max-width: 307px;
-            gap: 19px;
 
             &-block {
                 & img {

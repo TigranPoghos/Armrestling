@@ -48,12 +48,14 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     if (isOnSecondPage && localStorage.getItem('scrollToPartner')) {
-        if (TargetPartner) {
-            const scrollOffset = getScrollOffset();
-            const targetPosition = TargetPartner.offsetTop - scrollOffset;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        }
-        localStorage.removeItem('scrollToPartner');
+        setTimeout (() => {
+            if (TargetPartner) {
+                const scrollOffset = getScrollOffset();
+                const targetPosition = TargetPartner.offsetTop - scrollOffset;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+            localStorage.removeItem('scrollToPartner');
+        }, 500)
     }
     
     
@@ -91,20 +93,18 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     if (isOnSecondPage && localStorage.getItem('scrollToFederation')) {
+        setTimeout(() => {
         if (TargetFederation) {
             const scrollOffset = getScrollOffset();
             const targetPosition = TargetFederation.offsetTop - scrollOffset;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
         localStorage.removeItem('scrollToFederation');
+        }, 500)
     }
     
     
     
-
-
-    
-
 
 
 
@@ -614,22 +614,24 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         const PartnerItemBlock = document.querySelector('.partner__item-block')
-        if (PartnerItemBlock) {
-            gsap.to('.partner__item-block', {
-                opacity: 1,
-                duration: 1,
-                delay: 2,
-                scrollTrigger: {
-                    trigger: PartnerItemBlock,
-                    start: '110% bottom',
-                    scrub: false
-                }
-            })
-        }
+        mm.add("(min-width: 769px)", () => {
+            if (PartnerItemBlock) {
+                gsap.from('.partner__item-block', {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 2,
+                    scrollTrigger: {
+                        trigger: PartnerItemBlock,
+                        start: '110% bottom',
+                        scrub: false
+                    }
+                })
+            }
+        })
         mm.add("(max-width: 768px)", () => {
             if (PartnerItemBlock) {
-                gsap.to('.partner__item-block', {
-                    opacity: 1,
+                gsap.from('.partner__item-block', {
+                    opacity: 0,
                     duration: 1,
                     delay: 0,
                     scrollTrigger: {
@@ -639,7 +641,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     }
                 })
             }
-        });
+        })
 
         document.querySelectorAll('.footer__contact-left a').forEach
         (contactLeft => {
@@ -979,6 +981,23 @@ document.addEventListener("DOMContentLoaded", function(){
     if (document.querySelector(".mySwiper")) {
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
+            breakpoints: {
+                375: {
+                    spaceBetween: 19,
+                },
+
+                576: {
+                    spaceBetween: 29,
+                },
+
+                1024: {
+                    spaceBetween: 39,
+                },
+
+                1366: {
+                    spaceBetween: 60,
+                }
+            }
         });
     }
     
