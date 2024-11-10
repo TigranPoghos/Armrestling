@@ -216,7 +216,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 
-
+    gsap.set('.line-top', { scaleY: 0, transformOrigin: 'bottom'});
+    gsap.set('.line-bottom', { scaleY: 0});
 
     // Прелоадер
     const preloader = document.querySelector('.preloader');
@@ -789,8 +790,7 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         }
 
-        gsap.set('.line-top', { scaleY: 0, transformOrigin: 'bottom' });
-        gsap.set('.line-bottom', { scaleY: 0});
+
 
         document.querySelectorAll('.line-top').forEach
         (lineTop => {
