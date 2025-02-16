@@ -206,6 +206,10 @@ body {
 
         &-middle {
             scale: 0;
+
+            & img {
+                height: 100%;
+            }
         }
 
         &-left {

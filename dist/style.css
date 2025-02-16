@@ -191,6 +191,9 @@ body {
 .footer__contact-middle {
   scale: 0;
 }
+.footer__contact-middle img {
+  height: 100%;
+}
 .footer__contact-left {
   justify-content: center;
   display: flex;
