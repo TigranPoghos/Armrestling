@@ -655,7 +655,7 @@ body {
   transition: clip-path 1s ease-out;
 }
 .event__item {
-  background-image: url("../image/event.png");
+  background-image: url("../image/event__orel.jpg");
   padding: 472px 0 50px 126px;
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -723,9 +723,9 @@ body {
   line-height: 1;
 }
 
-@supports (background-image: url("../image/event.webp")) {
+@supports (background-image: url("../image/event__orel.webp")) {
   .event__item {
-    background-image: url("../image/event.webp");
+    background-image: url("../image/event__orel.webp");
   }
 }
 .partner {
@@ -829,6 +829,7 @@ body {
   transform: translate(-50%, -50%);
   animation: showImage 1s forwards;
   transform-origin: center center;
+  display: none;
 }
 .preloader__bottom {
   width: 70%;
