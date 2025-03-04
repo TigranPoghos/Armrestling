@@ -222,24 +222,61 @@ document.addEventListener("DOMContentLoaded", function(){
     // Прелоадер
     const preloader = document.querySelector('.preloader');
     const bodyIndex = document.querySelector('.body__index');
+    const tl = gsap.timeline()
+
+    tl.to('.preloader__line-top', {
+        height: 50,
+        duration: 1,
+    },0).to('.preloader__line-middle', {
+        height: 86,
+        duration: 1,
+    },0).to('.preloader__line-bottom', {
+        height: 115,
+        duration: 1,
+    },0) .to('.preloader__line-top', {
+        height: 115,
+        duration: 1,
+    },1).to('.preloader__line-middle', {
+        height: 50,
+        duration: 1,
+    },1).to('.preloader__line-bottom', {
+        height: 115,
+        duration: 1,
+    },1).to('.preloader__line-top', {
+        height: 115,
+        duration: 1,
+    },2).to('.preloader__line-middle', {
+        height: 86,
+        duration: 1,
+    },2).to('.preloader__line-bottom', {
+        height: 50,
+        duration: 1,
+    },2).to('.preloader__line-top', {
+        height: 86,
+        duration: 1,
+    },3).to('.preloader__line-middle', {
+        height: 115,
+        duration: 1,
+    },3).to('.preloader__line-bottom', {
+        height: 86,
+        duration: 1,
+    },3).then(() => {
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            bodyIndex?.classList.add('active');
+            startAnimations();
+        }, 500);
+    });    
 
     if (!sessionStorage.getItem('preloaderShown')) {
         preloader.style.display = 'block';
-        preloader.addEventListener('animationend', () => {
-            preloader.classList.add('hidden');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-                bodyIndex?.classList.add('active');
-                startAnimations();
-            }, 3000);
-        });
         sessionStorage.setItem('preloaderShown', 'true');
     } else {
         preloader?.classList.add('hidden');
         bodyIndex?.classList.add('active');
         startAnimations();
     }
-
 
 
 
