@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function(){
         height: 86,
         duration: 1,
     },3).then(() => {
-        preloader.classList.add('hidden');
+        preloader?.classList.add('hidden');
         setTimeout(() => {
             preloader.style.display = 'none';
             bodyIndex?.classList.add('active');
