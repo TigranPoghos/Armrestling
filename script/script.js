@@ -269,14 +269,14 @@ document.addEventListener("DOMContentLoaded", function(){
         }, 500);
     });    
 
-    if (!sessionStorage.getItem('preloaderShown')) {
+    // if (!sessionStorage.getItem('preloaderShown')) {
         preloader.style.display = 'block';
         sessionStorage.setItem('preloaderShown', 'true');
-    } else {
-        preloader?.classList.add('hidden');
-        bodyIndex?.classList.add('active');
-        startAnimations();
-    }
+    // } else {
+    //     preloader?.classList.add('hidden');
+    //     bodyIndex?.classList.add('active');
+    //     startAnimations();
+    // }
 
 
 

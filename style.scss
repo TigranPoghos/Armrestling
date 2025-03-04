@@ -2745,6 +2745,10 @@ body {
             }
         }
     }
+
+    .preloader__fon {
+        width: 60%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -3118,6 +3122,10 @@ body {
             width: 100%;
         }
     }
+
+    .preloader__fon {
+        width: 75%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -3426,6 +3434,10 @@ body {
                 margin-bottom: 104%;
             }
         }
+    }
+
+    .preloader__fon {
+        width: 90%;
     }
 }
 

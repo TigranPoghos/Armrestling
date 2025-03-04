@@ -2176,6 +2176,9 @@ body {
     min-height: 218px;
     font-size: 60px;
   }
+  .preloader__fon {
+    width: 60%;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -2447,6 +2450,9 @@ body {
   .event__item {
     width: 100%;
   }
+  .preloader__fon {
+    width: 75%;
+  }
 }
 @media (max-width: 575px) {
   .container {
@@ -2644,6 +2650,9 @@ body {
 @media (max-width: 516px) {
   .federation__name-adapt {
     margin-bottom: 104%;
+  }
+  .preloader__fon {
+    width: 90%;
   }
 }
 @media (max-width: 500px) {
