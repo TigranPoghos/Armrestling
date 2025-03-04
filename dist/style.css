@@ -371,6 +371,7 @@ body {
 }
 .marquee-item img {
   border-radius: 20px;
+  height: 100%;
 }
 
 @keyframes marquee {
@@ -407,6 +408,7 @@ body {
 }
 .marquee-item2 img {
   border-radius: 20px;
+  height: 100%;
 }
 
 @keyframes marquee2 {
