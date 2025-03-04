@@ -579,11 +579,10 @@ body {
 
 .event {
   overflow: hidden;
-  margin-bottom: 200px;
 }
 .event__row {
   flex-direction: column;
-  padding-bottom: 450px;
+  padding-bottom: 200px;
   box-sizing: border-box;
 }
 .event .gallery__title-right {
@@ -600,7 +599,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   max-width: 879px;
-  margin-bottom: 400px;
+  margin-bottom: 60px;
   transform: translate(-120%, 0);
 }
 .event__content-text span {
@@ -608,55 +607,6 @@ body {
   font-size: 40px;
   color: #fff;
   font-family: "Zen Kaku Gothic New";
-}
-.event__minotavr {
-  position: absolute;
-  top: 410px;
-  z-index: -100;
-  left: 50%;
-  transform: translate(-50%, 0);
-  opacity: 0.7;
-  clip-path: inset(50% 50% 50% 50%);
-  transition: clip-path 1s ease-out;
-}
-.event__minotavr img {
-  width: auto;
-}
-.event__fon {
-  position: absolute;
-  z-index: -5;
-  top: 210px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  clip-path: inset(50% 50% 50% 50%);
-  transition: clip-path 1s ease-out;
-}
-.event__fon-1366 {
-  display: none;
-  position: absolute;
-  z-index: -5;
-  left: 50%;
-  transform: translate(-50%, 0);
-  clip-path: inset(50% 50% 50% 50%);
-  transition: clip-path 1s ease-out;
-}
-.event__fon-1024 {
-  display: none;
-  position: absolute;
-  z-index: -5;
-  left: 50%;
-  transform: translate(-50%, 0);
-  clip-path: inset(50% 50% 50% 50%);
-  transition: clip-path 1s ease-out;
-}
-.event__fon-768 {
-  display: none;
-  position: absolute;
-  z-index: -5;
-  left: 50%;
-  transform: translate(-50%, 0);
-  clip-path: inset(50% 50% 50% 50%);
-  transition: clip-path 1s ease-out;
 }
 .event__item {
   background-image: url("../image/event__orel.jpg");
@@ -1283,15 +1233,11 @@ body {
   .federation__row {
     padding-bottom: 0;
   }
-  .event__row {
-    padding-bottom: 230px;
-  }
   .event .gallery__title-right {
     margin-top: 145px;
   }
   .event__content-text {
     max-width: 620px;
-    margin-bottom: 333px;
   }
   .event__content-text span {
     font-size: 32px;
@@ -1611,21 +1557,22 @@ body {
   .federation__president span {
     font-size: 20px;
   }
-  .event {
-    margin-bottom: 100px;
+  .event__row {
+    padding-bottom: 100px;
   }
   .event .gallery__title-right {
     margin-top: 110px;
   }
   .event__content-text {
     max-width: 405px;
-    margin-bottom: 250px;
+    margin-bottom: 45px;
   }
   .event__content-text span {
     font-size: 20px;
   }
   .event__item {
     padding: 273px 0 30px 73px;
+    box-shadow: -34px 55px 50px 0 rgba(0, 0, 0, 0.7);
   }
   .event__item-content {
     padding: 28px 12px;
@@ -1648,24 +1595,6 @@ body {
   }
   .event__item-button span {
     font-size: 17px;
-  }
-  .event__minotavr {
-    top: 230px;
-  }
-  .event__minotavr img {
-    max-width: 720px;
-  }
-  .event__fon-1024 {
-    display: block;
-  }
-  .event__fon-1366 {
-    display: none;
-  }
-  .event__fon-1024 {
-    top: 130px;
-  }
-  .event__row {
-    padding-bottom: 170px;
   }
   .partner {
     margin-bottom: 100px;
@@ -1971,15 +1900,12 @@ body {
   .federation__president span {
     font-size: 15px;
   }
-  .event {
-    margin-bottom: 100px;
-  }
   .event .gallery__title-right {
     margin-top: 80px;
   }
   .event__content-text {
     max-width: 300px;
-    margin-bottom: 188px;
+    margin-bottom: 35px;
     padding: 10px;
   }
   .event__content-text span {
@@ -1987,7 +1913,7 @@ body {
   }
   .event__item {
     padding: 206px 0 23px 65px;
-    box-shadow: -34px 70px 50px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: -34px 55px 50px 0 rgba(0, 0, 0, 0.7);
   }
   .event__item-content {
     padding: 20px 10px;
@@ -2011,24 +1937,8 @@ body {
   .event__item-button span {
     font-size: 13px;
   }
-  .event__minotavr {
-    top: 163px;
-  }
-  .event__minotavr img {
-    max-width: 540px;
-  }
-  .event__fon-1366 {
-    display: none;
-  }
-  .event__fon-1024 {
-    display: none;
-  }
-  .event__fon-768 {
-    display: block;
-    top: 88px;
-  }
   .event__row {
-    padding-bottom: 117px;
+    padding-bottom: 100px;
   }
   .partner {
     margin-bottom: 100px;
@@ -2312,12 +2222,6 @@ body {
   }
   .event__content-text span {
     font-size: 31px;
-  }
-  .event__fon-768 {
-    display: none;
-  }
-  .event__minotavr {
-    display: none;
   }
   .event__item {
     width: 80%;

@@ -501,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function(){
             gsap.to(EventItemContent, {
                 x:0,
                 duration: 1,
-                delay: 2,
+                delay: 1,
                 scrollTrigger: {
                     trigger: EventItemContent,
                     start: "50% bottom",
@@ -515,7 +515,6 @@ document.addEventListener("DOMContentLoaded", function(){
             gsap.to(EventItem, {
                 duration: 1,
                 clipPath: 'inset(-150px)',
-                delay: 1,
                 scrollTrigger: {
                     trigger: EventItemContent,
                     start: "50% bottom",
@@ -537,75 +536,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
             }
         });
-
-        const EventMinotavr = document.querySelector('.event__minotavr') 
-        if (EventMinotavr) {
-            gsap.to(EventMinotavr, {
-                duration: 1,
-                clipPath: 'inset(0 0 0 0)',
-                scrollTrigger: {
-                    trigger: EventItemContent,
-                    start: "50% bottom",
-                    scrub: false,
-                }
-            })
-        }
-
-        const EventFon = document.querySelector('.event__fon')
-        if (EventFon) {
-            gsap.to(EventFon, {
-                duration: 1,
-                clipPath: 'inset(0 0 0 0)',
-                delay: 1,
-                scrollTrigger: {
-                    trigger: EventItemContent,
-                    start: "50% bottom",
-                    scrub: false,
-                }
-            })
-        }
-
-        const EventFon1366 = document.querySelector('.event__fon-1366')
-        if (EventFon1366) {
-            gsap.to(EventFon1366, {
-                duration: 1,
-                clipPath: 'inset(0 0 0 0)',
-                delay: 1,
-                scrollTrigger: {
-                    trigger: EventItemContent,
-                    start: "50% bottom",
-                    scrub: false,
-                }
-            })
-        }
-
-        const EventFon1024 = document.querySelector('.event__fon-1024')
-        if (EventFon1024) {
-            gsap.to(EventFon1024, {
-                duration: 1,
-                clipPath: 'inset(0 0 0 0)',
-                delay: 1,
-                scrollTrigger: {
-                    trigger: EventItemContent,
-                    start: "50% bottom",
-                    scrub: false,
-                }
-            })
-        }
-
-        const EventFon768 = document.querySelector('.event__fon-768')
-        if (EventFon768) {
-            gsap.to(EventFon768, {
-                duration: 1,
-                clipPath: 'inset(0 0 0 0)',
-                delay: 1,
-                scrollTrigger: {
-                    trigger: EventItemContent,
-                    start: "50% bottom",
-                    scrub: false,
-                }
-            })
-        }
 
         const PartnerFon1 = document.querySelector('.partner__fon-1')
         if (PartnerFon1) {

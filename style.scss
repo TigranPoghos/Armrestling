@@ -647,11 +647,10 @@ body {
 
 .event {
     overflow: hidden;
-    margin-bottom: 200px;
 
     &__row {
         flex-direction: column;
-        padding-bottom: 450px;
+        padding-bottom: 200px;
         box-sizing: border-box;
     }
 
@@ -670,7 +669,7 @@ body {
             padding: 20px;
             box-sizing: border-box;
             max-width: 879px;
-            margin-bottom: 400px;
+            margin-bottom: 60px;
             transform: translate(-120%, 0);
 
             & span {
@@ -679,61 +678,6 @@ body {
                 color: #fff;
                 font-family: "Zen Kaku Gothic New";
             }
-        }
-    }
-
-    &__minotavr {
-        position: absolute;
-        top: 410px;
-        z-index: -100;
-        left: 50%;
-        transform: translate(-50%, 0);
-        opacity: 0.7;
-        clip-path: inset(50% 50% 50% 50%);
-        transition: clip-path 1s ease-out;
-
-        & img {
-            width: auto;
-        }
-    }
-
-    &__fon {
-        position: absolute;
-        z-index: -5;
-        top: 210px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        clip-path: inset(50% 50% 50% 50%);
-        transition: clip-path 1s ease-out;
-
-        &-1366 {
-            display: none;
-            position: absolute;
-            z-index: -5;
-            left: 50%;
-            transform: translate(-50%, 0);
-            clip-path: inset(50% 50% 50% 50%);
-            transition: clip-path 1s ease-out;
-        }
-    
-        &-1024 {
-            display: none;
-            position: absolute;
-            z-index: -5;
-            left: 50%;
-            transform: translate(-50%, 0);
-            clip-path: inset(50% 50% 50% 50%);
-            transition: clip-path 1s ease-out;
-        }
-
-        &-768 {
-            display: none;
-            position: absolute;
-            z-index: -5;
-            left: 50%;
-            transform: translate(-50%, 0);
-            clip-path: inset(50% 50% 50% 50%);
-            transition: clip-path 1s ease-out;
         }
     }
 
@@ -1498,10 +1442,6 @@ body {
     }
 
     .event {
-        &__row {
-            padding-bottom: 230px;
-        }
-
         & .gallery__title-right {
             margin-top: 145px;
         }
@@ -1509,7 +1449,6 @@ body {
         &__content {
             &-text {
                 max-width: 620px; 
-                margin-bottom: 333px;
 
                 & span {
                     font-size: 32px;
@@ -1959,7 +1898,9 @@ body {
     }
 
     .event {
-        margin-bottom: 100px;
+        &__row {
+            padding-bottom: 100px;
+        }
 
         & .gallery__title-right {
             margin-top: 110px;
@@ -1968,7 +1909,7 @@ body {
         &__content {
             &-text {
                 max-width: 405px;
-                margin-bottom: 250px;
+                margin-bottom: 45px;
 
                 & span {
                     font-size: 20px;
@@ -1978,6 +1919,7 @@ body {
 
         &__item {
             padding: 273px 0 30px 73px;
+            box-shadow: -34px 55px 50px 0 rgba(0, 0, 0, 0.7);
 
             &-content {
                 padding: 28px 12px;
@@ -2007,32 +1949,6 @@ body {
                     font-size: 17px;
                 }
             }
-        }
-
-        &__minotavr {
-            top: 230px;
-
-            & img {
-                max-width: 720px;
-            }
-        }
-
-        &__fon {
-            &-1024 {
-                display: block;
-            }
-
-            &-1366 {
-                display: none;
-            }
-
-            &-1024 {
-                top: 130px;
-            }
-        }
-
-        &__row {
-            padding-bottom: 170px;
         }
     }
 
@@ -2462,8 +2378,6 @@ body {
     }
 
     .event {
-        margin-bottom: 100px;
-
         & .gallery__title-right {
             margin-top: 80px;
         }
@@ -2471,7 +2385,7 @@ body {
         &__content {
             &-text {
                 max-width: 300px;
-                margin-bottom: 188px;
+                margin-bottom: 35px;
                 padding: 10px;
 
                 & span {
@@ -2482,7 +2396,7 @@ body {
 
         &__item {
             padding: 206px 0 23px 65px;
-            box-shadow: -34px 70px 50px 0 rgba(0, 0, 0, 0.7);
+            box-shadow: -34px 55px 50px 0 rgba(0, 0, 0, 0.7);
 
             &-content {
                 padding: 20px 10px;
@@ -2514,31 +2428,8 @@ body {
             }
         }
 
-        &__minotavr {
-            top: 163px;
-
-            & img {
-                max-width: 540px;
-            }
-        }
-
-        &__fon {
-            &-1366 {
-                display: none;
-            }
-
-            &-1024 {
-                display: none;
-            }
-
-            &-768 {
-                display: block;
-                top: 88px;
-            }
-        }
-
         &__row {
-            padding-bottom: 117px;
+            padding-bottom: 100px;
         }
     }
 
@@ -2926,14 +2817,6 @@ body {
                     font-size: 31px;
                 }
             }
-        }
-
-        &__fon-768 {
-            display: none;
-        }
-
-        &__minotavr {
-            display: none;
         }
 
         &__item {
