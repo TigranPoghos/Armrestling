@@ -266,17 +266,17 @@ document.addEventListener("DOMContentLoaded", function(){
             preloader.style.display = 'none';
             bodyIndex?.classList.add('active');
             startAnimations();
-        }, 500);
+        }, 200);
     });    
 
-    // if (!sessionStorage.getItem('preloaderShown')) {
+    if (!sessionStorage.getItem('preloaderShown')) {
         preloader.style.display = 'block';
         sessionStorage.setItem('preloaderShown', 'true');
-    // } else {
-    //     preloader?.classList.add('hidden');
-    //     bodyIndex?.classList.add('active');
-    //     startAnimations();
-    // }
+    } else {
+        preloader?.classList.add('hidden');
+        bodyIndex?.classList.add('active');
+        startAnimations();
+    }
 
 
 
