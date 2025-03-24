@@ -682,7 +682,7 @@ body {
     }
 
     &__item {
-        background-image: url("../image/event__orel.jpg");
+        background-image: url("../image/lipeck.jpg");
         padding: 472px 0 50px 126px;
         box-sizing: border-box;
         background-repeat: no-repeat;
@@ -759,9 +759,9 @@ body {
     }
 }
 
-@supports (background-image: url("../image/event__orel.webp")) {
+@supports (background-image: url("../image/lipeck.webp")) {
     .event__item {
-        background-image: url("../image/event__orel.webp");
+        background-image: url("../image/lipeck.webp");
         background-size: cover;
         background-repeat: no-repeat;
     }
