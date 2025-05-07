@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     if (!sessionStorage.getItem('preloaderShown')) {
-        preloader?.style.display = 'block';
+        preloader.style.display = 'block';
         sessionStorage.setItem('preloaderShown', 'true');
     } else {
         preloader?.classList.add('hidden');
