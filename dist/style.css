@@ -706,9 +706,6 @@ body {
 .partner__item::-webkit-scrollbar {
   display: none;
 }
-.partner__item-block {
-  width: auto !important;
-}
 .partner__item-block img {
   border-radius: 20px;
   width: auto;
